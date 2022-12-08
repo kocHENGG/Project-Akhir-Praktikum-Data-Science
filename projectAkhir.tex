@@ -1,0 +1,2075 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Project Akhir},
+  pdfauthor={Anis Magfiroh},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Project Akhir}
+\author{Anis Magfiroh}
+\date{2022-11-30}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tm)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'tm' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: NLP
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(wordcloud2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'wordcloud2' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(twitteR)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'twitteR' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(rtweet)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'rtweet' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'rtweet'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:twitteR':
+## 
+##     lookup_statuses
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(shiny) }\CommentTok{\#package shiny}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'shiny' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(syuzhet) }\CommentTok{\#package analisis sentimen}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'syuzhet' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'syuzhet'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:rtweet':
+## 
+##     get_tokens
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(wordcloud) }\CommentTok{\#package wordcloud}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'wordcloud' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: RColorBrewer
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(vroom)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'vroom' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'dplyr' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:twitteR':
+## 
+##     id, location
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'ggplot2'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:NLP':
+## 
+##     annotate
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(RColorBrewer)}
+\FunctionTok{library}\NormalTok{(plyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'plyr' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## ------------------------------------------------------------------------------
+\end{verbatim}
+
+\begin{verbatim}
+## You have loaded plyr after dplyr - this is likely to cause problems.
+## If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+## library(plyr); library(dplyr)
+\end{verbatim}
+
+\begin{verbatim}
+## ------------------------------------------------------------------------------
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'plyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:dplyr':
+## 
+##     arrange, count, desc, failwith, id, mutate, rename, summarise,
+##     summarize
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:twitteR':
+## 
+##     id
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(RTextTools)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'RTextTools' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: SparseM
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'SparseM'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:base':
+## 
+##     backsolve
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidytext)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'tidytext' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'tidyverse' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Registered S3 methods overwritten by 'readr':
+##   method                    from 
+##   as.data.frame.spec_tbl_df vroom
+##   as_tibble.spec_tbl_df     vroom
+##   format.col_spec           vroom
+##   print.col_spec            vroom
+##   print.collector           vroom
+##   print.date_names          vroom
+##   print.locale              vroom
+##   str.col_spec              vroom
+\end{verbatim}
+
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.2 --
+## v tibble  3.1.8     v purrr   0.3.4
+## v tidyr   1.2.1     v stringr 1.4.1
+## v readr   2.1.3     v forcats 0.5.2
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x ggplot2::annotate()      masks NLP::annotate()
+## x plyr::arrange()          masks dplyr::arrange()
+## x readr::col_character()   masks vroom::col_character()
+## x readr::col_date()        masks vroom::col_date()
+## x readr::col_datetime()    masks vroom::col_datetime()
+## x readr::col_double()      masks vroom::col_double()
+## x readr::col_factor()      masks vroom::col_factor()
+## x readr::col_guess()       masks vroom::col_guess()
+## x readr::col_integer()     masks vroom::col_integer()
+## x readr::col_logical()     masks vroom::col_logical()
+## x readr::col_number()      masks vroom::col_number()
+## x readr::col_skip()        masks vroom::col_skip()
+## x readr::col_time()        masks vroom::col_time()
+## x readr::cols()            masks vroom::cols()
+## x purrr::compact()         masks plyr::compact()
+## x plyr::count()            masks dplyr::count()
+## x readr::date_names_lang() masks vroom::date_names_lang()
+## x readr::default_locale()  masks vroom::default_locale()
+## x plyr::failwith()         masks dplyr::failwith()
+## x dplyr::filter()          masks stats::filter()
+## x purrr::flatten()         masks rtweet::flatten()
+## x readr::fwf_cols()        masks vroom::fwf_cols()
+## x readr::fwf_empty()       masks vroom::fwf_empty()
+## x readr::fwf_positions()   masks vroom::fwf_positions()
+## x readr::fwf_widths()      masks vroom::fwf_widths()
+## x plyr::id()               masks dplyr::id(), twitteR::id()
+## x dplyr::lag()             masks stats::lag()
+## x readr::locale()          masks vroom::locale()
+## x dplyr::location()        masks twitteR::location()
+## x plyr::mutate()           masks dplyr::mutate()
+## x readr::output_column()   masks vroom::output_column()
+## x readr::problems()        masks vroom::problems()
+## x plyr::rename()           masks dplyr::rename()
+## x plyr::summarise()        masks dplyr::summarise()
+## x plyr::summarize()        masks dplyr::summarize()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidymodels)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'tidymodels' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## -- Attaching packages -------------------------------------- tidymodels 1.0.0 --
+## v broom        1.0.1     v rsample      1.1.0
+## v dials        1.1.0     v tune         1.0.1
+## v infer        1.0.3     v workflows    1.1.2
+## v modeldata    1.0.1     v workflowsets 1.0.0
+## v parsnip      1.0.3     v yardstick    1.1.0
+## v recipes      1.0.3
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'dials' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'infer' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'modeldata' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'parsnip' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'recipes' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'rsample' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'tune' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'workflows' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'workflowsets' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'yardstick' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ----------------------------------------- tidymodels_conflicts() --
+## x ggplot2::annotate() masks NLP::annotate()
+## x plyr::arrange()     masks dplyr::arrange()
+## x purrr::compact()    masks plyr::compact()
+## x plyr::count()       masks dplyr::count()
+## x scales::discard()   masks purrr::discard()
+## x plyr::failwith()    masks dplyr::failwith()
+## x dplyr::filter()     masks stats::filter()
+## x recipes::fixed()    masks stringr::fixed()
+## x purrr::flatten()    masks rtweet::flatten()
+## x plyr::id()          masks dplyr::id(), twitteR::id()
+## x dplyr::lag()        masks stats::lag()
+## x dplyr::location()   masks twitteR::location()
+## x plyr::mutate()      masks dplyr::mutate()
+## x infer::observe()    masks shiny::observe()
+## x plyr::rename()      masks dplyr::rename()
+## x yardstick::spec()   masks readr::spec(), vroom::spec()
+## x recipes::step()     masks stats::step()
+## x plyr::summarise()   masks dplyr::summarise()
+## x plyr::summarize()   masks dplyr::summarize()
+## * Learn how to get started at https://www.tidymodels.org/start/
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(plotly)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'plotly' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'plotly'
+## 
+## The following objects are masked from 'package:plyr':
+## 
+##     arrange, mutate, rename, summarise
+## 
+## The following object is masked from 'package:ggplot2':
+## 
+##     last_plot
+## 
+## The following object is masked from 'package:stats':
+## 
+##     filter
+## 
+## The following object is masked from 'package:graphics':
+## 
+##     layout
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(here)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'here' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## here() starts at C:/Users/ACER/OneDrive/Dokumen/S1 IF/smt 5/Prak DS/Project Akhir
+## 
+## Attaching package: 'here'
+## 
+## The following object is masked from 'package:plyr':
+## 
+##     here
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(DT)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'DT' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'DT'
+## 
+## The following objects are masked from 'package:shiny':
+## 
+##     dataTableOutput, renderDataTable
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Key auth Twitter API}
+\NormalTok{consumer.api\_key }\OtherTok{\textless{}{-}} \StringTok{"DuixF49xDkpmA98YPoxe3tmjS"}
+\NormalTok{consumer.api\_secret\_key }\OtherTok{\textless{}{-}} \StringTok{"4qHdnw4sORhGca9S0XtbB9hQZ1lliwtJ4A25LHpwoIduMqzYOO"}
+\NormalTok{access.token }\OtherTok{\textless{}{-}} \StringTok{"1595430338423291904{-}c73aAX0ycoeKWHxAx2fk1S09Pi8D2Q"}
+\NormalTok{access.token\_secret }\OtherTok{\textless{}{-}} \StringTok{"8kioK4IEp3oaSC5CFZYJWb2K7hsjXFtei4LqaWGUbNOck"}
+  
+\CommentTok{\# Start authentication with OAuth}
+\FunctionTok{setup\_twitter\_oauth}\NormalTok{(consumer.api\_key, consumer.api\_secret\_key, access.token, access.token\_secret)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Using direct authentication"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tweets }\OtherTok{=} \FunctionTok{searchTwitter}\NormalTok{(}\StringTok{\textquotesingle{}Pajak\textquotesingle{}}\NormalTok{, }
+                               \AttributeTok{n =} \DecValTok{800}\NormalTok{,}
+                               \AttributeTok{lang =} \StringTok{"id"}\NormalTok{,}
+                               \AttributeTok{retryOnRateLimit =} \FloatTok{10e5}\NormalTok{)}
+\NormalTok{text }\OtherTok{\textless{}{-}} \FunctionTok{do.call}\NormalTok{(}\StringTok{"rbind"}\NormalTok{, }\FunctionTok{lapply}\NormalTok{(tweets, as.data.frame))}
+
+\FunctionTok{write.csv}\NormalTok{(text, }\AttributeTok{file =} \StringTok{\textquotesingle{}data\_pajak.csv\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{View}\NormalTok{(text)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{d }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{\textquotesingle{}data\_pajak.csv\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{komentar }\OtherTok{\textless{}{-}}\NormalTok{ d}\SpecialCharTok{$}\NormalTok{text}
+\NormalTok{reviewC }\OtherTok{\textless{}{-}} \FunctionTok{Corpus}\NormalTok{(}\FunctionTok{VectorSource}\NormalTok{(komentar))}
+\NormalTok{removeURL }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{gsub}\NormalTok{(}\StringTok{"http[\^{}[:space:]]*"}\NormalTok{, }\StringTok{""}\NormalTok{, x)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewC, removeURL)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewC, removeURL): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{removeNL }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(y) }\FunctionTok{gsub}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{, }\StringTok{" "}\NormalTok{, y)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, removeNL)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, removeNL): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{replacecomma }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(y) }\FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{, }\StringTok{""}\NormalTok{, y)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, replacecomma)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, replacecomma): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{removeRT }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(y) }\FunctionTok{gsub}\NormalTok{(}\StringTok{"RT "}\NormalTok{, }\StringTok{""}\NormalTok{, y)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, removeRT)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, removeRT): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{removetitik2 }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(y) }\FunctionTok{gsub}\NormalTok{(}\StringTok{":"}\NormalTok{, }\StringTok{""}\NormalTok{, y)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, removetitik2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, removetitik2): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{removetitikkoma }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(y) }\FunctionTok{gsub}\NormalTok{(}\StringTok{";"}\NormalTok{, }\StringTok{" "}\NormalTok{, y)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, removetitikkoma)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, removetitikkoma): transformation
+## drops documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{removetitik3 }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(y) }\FunctionTok{gsub}\NormalTok{(}\StringTok{"p…"}\NormalTok{, }\StringTok{""}\NormalTok{, y)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, removetitik3)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, removetitik3): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{removeamp }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(y) }\FunctionTok{gsub}\NormalTok{(}\StringTok{"\&amp;"}\NormalTok{, }\StringTok{""}\NormalTok{, y)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, removeamp)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, removeamp): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{removeUN }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(z) }\FunctionTok{gsub}\NormalTok{(}\StringTok{"@}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{w+"}\NormalTok{, }\StringTok{""}\NormalTok{, z)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, removeUN)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, removeUN): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{removesym }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(y) }\FunctionTok{gsub}\NormalTok{(}\StringTok{"ð"}\NormalTok{, }\StringTok{""}\NormalTok{, y)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, removesym)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, removesym): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{remove.all }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(xy) }\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}[:alpha:][:space:]]*"}\NormalTok{, }\StringTok{""}\NormalTok{, xy)}
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean,remove.all)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, remove.all): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, removePunctuation)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, removePunctuation): transformation
+## drops documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{reviewclean }\OtherTok{\textless{}{-}} \FunctionTok{tm\_map}\NormalTok{(reviewclean, tolower)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(reviewclean, tolower): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dataframe}\OtherTok{\textless{}{-}}\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{text=}\FunctionTok{unlist}\NormalTok{(}\FunctionTok{sapply}\NormalTok{(reviewclean, }\StringTok{\textasciigrave{}}\AttributeTok{[}\StringTok{\textasciigrave{}}\NormalTok{)), }\AttributeTok{stringsAsFactors=}\NormalTok{F)}
+\NormalTok{dataframe}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                                                                                                                 text
+## 1                                                                                                                  qt paling cerdas 
+## 2                                                                                                   halo kak  saya lupa no efin saya
+## 3          jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 4                    dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 5             di katolik dan protestan katekisasinya lama  di pentakosta dan cryzmtc katekisasinya express sih tapi pajak  seumur hi
+## 6                                               bisa juga modus menghindari pajak karna menyembunyikan nilai penghssilan riilnya mas
+## 7                                                                                                            yg ada kasus pajak nyaa
+## 8                 oiya yg kata nyokap tu grgr gw ga bayar parkir tiap ke alpa or indo  ya gimana ya org parkir udh dicover sm pajak 
+## 9          jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 10                                                                   punya duit si kalau bisa beli  albuk per album  pajak sekitar  
+## 11                   dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 12         jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 13                      toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 14                                                 wb ceo my g kepikiran sampe sini lagi sibuk ngitung pajak closing tahunan wkwkwk 
+## 15                                                                            dipuji bukan di puji emang banyak sih orang kaya bodoh
+## 16                    hahaha itu ngaruhnya nanti di uang pisah kalau kena phk sama bonus aja karena nanti biasanya dihitung dari gaj
+## 17                             nov  economist faisal basri  rakyat bangka belitung merugi besar  pemerintah jokowi jual bijih nikel 
+## 18         jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 19                                       mending timur tengah karena persaingan lebih kompetitif terutama karena ada  pajak di arab 
+## 20                                                                    selasa depan  lagi kawan yg berangkat ke abu dhabi gawe disana
+## 21                                                          tuh mobil bmw blum bayar pajak ma stnk baru terakhir   harus bayar thnan
+## 22                                                              ya ampun wong ngene kok dulu dadi mentri rugi aku bayar pajak hhahaa
+## 23                      toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 24                                                                       lama kelamaan lucu juga kamu gus anti mainstream lanjutkan 
+## 25                kenapa sih gue baru tau kalo cara cek ntpn pajak yg susaj dibaca ternyata bisa ditrack pake kode billing aja jadi 
+## 26                                      nggak usah exportnya pajak royalti yg diterima oleh pemilik ijin dan pajak lainnya yg diter 
+## 27                                                                                              ngeributin print out pajak awikwok  
+## 28                                             indonesia tidak mau eksport bahan mentah nikel sampai putusan incrach itupun dgn paj 
+## 29                                             pt a bukan pkp namun sertel akan kadaluwarsa bagaimana mengajukan secara online seca 
+## 30           ikn sudah di sediakan tanahnya dan di tawar tawarkan kesana kemari walaupun dg iming iming sampai bebas pajak  tahundan
+## 31            di katolik dan protestan katekisasinya lama  di pentakosta dan cryzmtc katekisasinya express sih tapi pajak  seumur hi
+## 32         jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 33                       saking banyaknya ya polisi sampe keblenger nge check nya udah auto miskinkan aja  tahun penipuan pajak lo  
+## 34                                halo min udah lapor spt status sukses lapor ada bpe nya juga tapi mau cetak spt di web efaktur ga 
+## 35                                   bikin lampu penerangan jalan boz banyak jalan gelap lagian tiap tahun juga rakyat bayar pajak b
+## 36                       gapok kecil krn perusahaan mau ngurangin pajak sama thr juga sbenernya aman aja kl tunjangannya benchmarkny
+## 37                             nov  economist faisal basri  rakyat bangka belitung merugi besar  pemerintah jokowi jual bijih nikel 
+## 38                                 semenjak pajak bbmsembako naiklahan pekerjaan susahkebutuhan hidup semakin menggila  banyak orang
+## 39                                                                          untuk dapatkan  mcflurry harga special rp  sebelum paja 
+## 40                                                                                                            dipotong pajak enggaak
+## 41                                                               yang kuning kak trs ini  untuk dapatkan  mcflurry harga special rp 
+## 42                                 min tmpt sy bekerja baru pkp  oktober  ini saya lporan ppn untuk rekapitulasi penyerahan semua d 
+## 43                           halo kak apabila yang dimaksud adalah delivery duty paid kakak bisa konfirmasikan kembali kepada kepad 
+## 44         jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 45                                                                                   kalah gugatan wto gg sih ngab owi naikin pajak 
+## 46                   dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 47                          punten kita iarmys rela bayar pajak dan ongkir mahal demi beli albumnya bangtan apalagi ini solo projec 
+## 48                      toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 49         jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 50         pajak itu memberatkan gak sih  tahukah kamu  bestie di negeri kita ini ada berbagai macam jenis pajak mulai dari pajak ke
+## 51                  hal ini terungkap dalam gathering pajak tahun  yang digelar badan pendapatan pengelolaan keuangan dan aset daer 
+## 52                                  akwkwkwkkw duh bulanbulannya history chrome penuh sama searching update peraturan pajak ama peb 
+## 53                 ini tidak menerima permohonan penggantian paspor karena hilang rusak ataupun beda data  program pelayanan eazy p 
+## 54               benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 55                 wts preorder ls enhypen sealed  harga k dp cicilan k dp full k  fix price karna sudah pernah bawa ls enhypen jika
+## 56                                                                         rasanya gak ikhlas bayar pajak utk bayar gaji org spt itu
+## 57                                                                                               ciee yang paling merasa bayar pajak
+## 58                 sakit hati gimana bro pilkadanya pun yang mana saya nggak tahu bro cara pikir anda itu kayak apa gitu bro benera 
+## 59                                   semenjak pajak bbmsembako naiklahan pekerjaan susahkebutuhan hidup semakin menggila  banyak or 
+## 60                                     tahun ini sih yah hoki hokian aja lah semoga nggak di hargainn gila oleh beacukai tapi mungk 
+## 61                                         klok bisa jangan hanya nikel ya semua bahan mentah terutama minerba bisa di kenakan paja 
+## 62              dijamu kbri thailand lanyalla jelaskan mengapa harus kembali ke sistem asli indonesia  bangkokpenerimaan negara buka
+## 63               bakal terjadi penaikan pajak ekpsort nikel    kalau indonesia kalah banding di wto  sementara ini masih normalpajak
+## 64                      toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 65                                                                                   nguntungin lgg pke byr pajakbbmpokoknya amn deh
+## 66                                                             muncul balesannya gini terus kak sudah berkali kali tolong solusinya 
+## 67                                   rekening milik kanye west yang berisi uang senilai rp  triliun tidak bisa dicairkan tempodunia 
+## 68                          help rt  jastip handcarry mlb jungkook taehyung   k dp k  ems tax packing adm harga bs naik atau turun t
+## 69                      toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 70          khusus jabodetabek area pinjaman kta dari bank asing maksimal  juta     syarat ktp cc npwp     pakai bukti potong pajak 
+## 71                      toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 72                                                                                            bonus aja kena pajak gede mayan nyesek
+## 73                                            harganya naik ya terakhir coba menu  avatar kena ribu exclude pajak negaraharushadir  
+## 74               benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 75                                                                                                nggiyu aesebelum ngguyu byar pajak
+## 76                            help rt  jastip handcarry mlb jungkook taehyung   k dp k  ems tax packing adm harga bs naik atau turu 
+## 77                        wts preorder ls enhypen sealed  harga k dp cicilan k dp full k  fix price karna sudah pernah bawa ls enhy 
+## 78                                                                            soal insentif pajak di dana pensiun seberapa penting  
+## 79                                                                            pajak permohonan pbk melalui aplikasi epbk untuk  kpp 
+## 80           dalam paparannya alex menyebut bahwa para pengusaha memiliki peranan vital dalam kemajuan suatu wilaya karena aktivitas
+## 81                                 selamat pagi temankeu   mulai hari rabu dengan cek infokeu kurs pajak terbaru yuk   selengkapnya 
+## 82                                    kalau info rencana pajak  ekspor nikel bagaimana itu barang akan rugikah rakyat indonesia bang
+## 83                                                                                                           jadi ingat pajak motor 
+## 84                  nik  npwp  sebagai wujud implementasi reformasi pajak untuk layanan perpajakan yang menyeluruh kawanpajak dapat 
+## 85                            kalau masalah ekspor nikel bagaimana pandangan prof jangan urusan politik saja dibahas atau sy yg blm 
+## 86                                                                                   kemarin liat dah ada yg cc in ke pajak jg pink 
+## 87                 ditjen pajak djp mengingatkan wajib pajak bahwa tidak semua hibah dapat dibebaskan dari pengenaan pph final atas 
+## 88                    sehingga kpp pratama lubuk linggau berhasil mencapai  target penerimaan pajak empat tahun berturutturut pada  
+## 89               kegiatan diawali dengan sambutan kepala kpp pratama lubuk linggau diwakili oleh kepala seksi pengawasan v wawan se 
+## 90                kantor pelayanan pajak kpp pratama lubuk linggau menggelar sosialisasi kewajiban perpajakan dan program pengharga 
+## 91                                                                       min injury time begini jangan down dong web efakturnyahadeh
+## 92                                                                   kalbar news jaksa gandeng inspektorat telusuri kerugian pajak  
+## 93            di katolik dan protestan katekisasinya lama  di pentakosta dan cryzmtc katekisasinya express sih tapi pajak  seumur hi
+## 94                                                                                                     ayo mintain pp pajak pindahan
+## 95                                                              bahlil sebut mungkin pajak ekspor dinaikkan setelah ri kalah di wto 
+## 96                      hari ini  fungsional penyuluh pajak memaparkan materi dalam kelas pajak yang bertema sosialisasi hak dan ke 
+## 97                                                                                              org kok pada bisa ngerjain pajak ya 
+## 98                                                             evelyn xuě membayar pajak tempat tinggal sebesar  dari  terima kasih 
+## 99                                                   usaha tambang nikel itu terbuka utk swasta dan banyak perusahaan tambang nikel 
+## 100                    di katolik dan protestan katekisasinya lama  di pentakosta dan cryzmtc katekisasinya express sih tapi pajak  
+## 101                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 102                                                             bahlil sebut mungkin pajak ekspor dinaikkan setelah ri kalah di wto 
+## 103                                                             bahlil sebut mungkin pajak ekspor dinaikkan setelah ri kalah di wto 
+## 104                                                                                    posting si kucing di kantor pajak lucu banget
+## 105                                                                    penerimaan pajak kpp pratama subang mencapai target rpmiliar 
+## 106                             trus mengisi pedoman pengkreditan pajak masukan sebesar  dari pajak keluaran yang seharusnya dipung 
+## 107                                         kalo menaikan pajak eksport nikel setujuh banget untuk mengamankan sda kita pointnya yg 
+## 108              bapak kanit kamsel memberikan himbauan kepada satpam pajak pratama ngawi agar tertib berlalu lintas di jalan serta 
+## 109                                                                                                        hrs bikin di kantor pajak
+## 110                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 111                               ngapain saya kasih tahu ke anda yang digaji dari pajak saya bro ngapain coba justru saya yang jad 
+## 112                                                                                           baik kak  terima kasih sudah membantu 
+## 113                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 114                                                                                              oke min baik terima kasih arahannya
+## 115                            kayaknya tadi ada mobil biru plat merah parkir di jalur lambat bayeman depan bangunan pajak atau seb 
+## 116                                              itu prnyataan yg disampaikan pk jokowi sbgai tindak lanjut pernyataan tstbulan feb 
+## 117                                                                                                         dikunyah pelan ngo      
+## 118                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 119                                    smoga dibolehin kos dan part time lagi semester depan since disuruh bayar pajak motor sendiri
+## 120                                                     yg nggak keliatan itu ya duit nikel ada yg jadi pendapatan pajak   dari paj 
+## 121            pajak motor aja udah  jutaan wkwkkwk artinya harganya turun dong yak  wajar aktivis transportasi umum kejang kagak da
+## 122                                                      klo abg bandingkan di marketpalce yg abg maksud itu itu kan udh masuk indo 
+## 123                                                                                                         objek ppn ya kak dan pkp
+## 124                                                  bakal terjadi penaikan pajak ekpsort nikel    kalau indonesia kalah banding di 
+## 125                                                ari siteteh mah sok kitulangsung tenggelam kan akun nyatakut di kejar orang pajak
+## 126                                                                                pgn gw lemparin pake batu ktr dinas pndidikan da 
+## 127                                            liat penjualan mereka beda jauh bgt sm global pdahal mreka ga perlu bayar pajak ongki
+## 128                           liat penjualan mereka beda jauh bgt sm global pdahal mreka ga perlu bayar pajak ongkir gede nngis bgt 
+## 129                                                                                           tugas pajak sama mtk aku udah selesai 
+## 130                            nov  economist faisal basri  rakyat bangka belitung merugi besar  pemerintah jokowi jual bijih nikel 
+## 131            pajak motor aja udah  jutaan wkwkkwk artinya harganya turun dong yak  wajar aktivis transportasi umum kejang kagak da
+## 132                sobat lantas inovasi pelayanan adalah budaya kerja kami inovasi tanya saya membantu para wajib pajak yg kesulita 
+## 133                                     kalo situ mau menghindari pajak dengan cara beli inter ya silahkan ga ada yang ngelarang tuh
+## 134                     bakal terjadi penaikan pajak ekpsort nikel    kalau indonesia kalah banding di wto  sementara ini masih nor 
+## 135            pajak motor aja udah  jutaan wkwkkwk artinya harganya turun dong yak  wajar aktivis transportasi umum kejang kagak da
+## 136                 nik  npwp  sebagai wujud implementasi reformasi pajak untuk layanan perpajakan yang menyeluruh kawanpajak dapat 
+## 137                              hutang sebesar apapun majikan antum tak peduli tetap ambisi ingin jadi presiden di ngr kita indone 
+## 138                          ditjen pajak djp membagi  status master file dari wajib pajak  masterfile masterfilewajibpajak npwp ne 
+## 139                             maklum om dulu dia belum tau rasanya uang pajak kalo sekarang ya tau sendiri lah level dia kayak apa
+## 140                analisis faktorfaktor yang memengaruhi kesadaran wajib pajak umkm kota malang dalam memenuhi kewajibanperpajakan 
+## 141                                                             bahlil sebut mungkin pajak ekspor dinaikkan setelah ri kalah di wto 
+## 142                                                                                                         dikunyah pelan ngo      
+## 143        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 144                                                                                                         dikunyah pelan ngo      
+## 145                                                                                                         dikunyah pelan ngo      
+## 146                           dikarenakan ada pembetulan dari pihak lain karena faktur di ganti  dengan nominal sama muncul otomati 
+## 147                                                   masalahnya harga iphone inter itu rata lebih murah jt dari iphone ibox itungan
+## 148                          halo selamat sore  kartu npwp saya sudah sebulan belum dianterkan ke alamat sayaatau saya harus mengam 
+## 149                                                                                                           kembali bersama pajak 
+## 150                                                                                             engga sih bayar pajak nya lebih gede
+## 151                                                                                                          trima kasih infonya kak
+## 152                    ditjen pajak djp mengingatkan pengusaha kena pajak pkp untuk selalu melaporkan surat pemberitahuan spt masa  
+## 153        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 154                                                                                                            sudah bisa kak thanks
+## 155                                                                                                     nnti disamperin ditjen pajak
+## 156                                                   orang bijak taat pajak orang jahat makan pajak orang gila tak diajak katabajak
+## 157                                                                                                         dikunyah pelan ngo      
+## 158                                                                                                         dikunyah pelan ngo      
+## 159                                                                                                     server sibuk melulu nih pak 
+## 160        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 161                                                                                                         dikunyah pelan ngo      
+## 162                 kemudian tiga belas digit berikutnya adalah nsfp yang diberikan oleh direktorat jenderal pajak djp  untuk lebih 
+## 163                                                                                                         dikunyah pelan ngo      
+## 164              kode dan nsfp tersebut terdiri atas enam belas digit dua digit pertama adalah kode transaksi dan satu digit beriku 
+## 165                pnbp pendapatan negara bukan pajak di naikkan setinggi langit oleh rezim jokowi sehing banyak pengusaha yg merugi
+## 166             tahukah kawanpajak  dalam pengenaan pajak atas makanan dan minuman terdapat  jenis pajak yaitu pajak pusat dalam hal
+## 167              yuk kenali jenis dan saat penggunaan kode transaksi faktur pajak  kode transaksi merupakan bagian yang harus ada d 
+## 168                                                                                                         dikunyah pelan ngo      
+## 169               dalam paparannya alex menyebut bahwa para pengusaha memiliki peranan vital dalam kemajuan suatu wilaya karena akt 
+## 170                                                                           dua ribu rupiah buat jenar dipotong pajak cibumangatus
+## 171                                                          dan ini berlaku untuk berbagai macam varian iphone literally kita beli 
+## 172                         cuma kurang bersyukur aja mslh nya di daerah lain paling  jt ada yg kurang sedangkan harga bbm sama  pa 
+## 173                         nangis bgt banyakan penjualan global drpd korea  sumpah padahal mereka gaperlu bayar pajak ongkir gede  
+## 174                                                          masalahnya harga iphone inter itu rata lebih murah jt dari iphone ibox 
+## 175                                                          untuk pencatatan dipembeliannya point brati diakui sbagai apa ya taxmin
+## 176                                                                                           kalo yg namanya pajak masuk kas negara
+## 177                  sri mulyani cs sulit kejar pajak freelancer kenapa ya yntkts jeng sri separah itu kah keuangan wakanda sekarang
+## 178        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 179           penerimaan negara bukan pajak pnbp dipastikan akan meningkat berkali lipat dibanding saat ini jika indonesia menerapka
+## 180               saat ini lanjut lanyalla negara hanya menjadi pemberi ijin atas konsesi tambang dan lahan yang dikelola total ole 
+## 181                penerimaan negara bukan pajak pnbp dipastikan akan meningkat berkali lipat dibanding saat ini jika indonesia men 
+## 182        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 183            pajak motor aja udah  jutaan wkwkkwk artinya harganya turun dong yak  wajar aktivis transportasi umum kejang kagak da
+## 184                   diemot boleh di srosop boleh juga  penelusuran bukan pernyataan pejabat bersangkutan  berita soal pajak itu b 
+## 185                                             hahaha otakmua nggak nyampe harga  di shanghai itu ore kan trus di indonesia dijual 
+## 186             lowongan kerja kepala toko staff pajak amp  sales cv kurnia  halo sobat jobseekers lokercirebon untuk info lebih je 
+## 187         khusus jabodetabek area pinjaman kta dari bank asing maksimal  juta     syarat ktp cc npwp     pakai bukti potong pajak 
+## 188                                                                           realisasi pajak hotel kota mataram mencapai rp miliar 
+## 189                                                                       semua rakyat di republik ini bayar pajakkgk ada produk yg 
+## 190                                                                                                         dikunyah pelan ngo      
+## 191                                                                                                         dikunyah pelan ngo      
+## 192                                                                           realisasi pajak hotel kota mataram mencapai rp miliar 
+## 193                               pnbp pendapatan negara bukan pajak di naikkan oleh rezim jokowi  sehing banyak pengusaha yg merugi
+## 194                                                                  kelakuan pekerja yg gajinya dari pajak rakyat suka ada ada saja
+## 195                                                                                                         udah bayar pajak blm min
+## 196                pajak motor aja udah  jutaan wkwkkwk artinya harganya turun dong yak  wajar aktivis transportasi umum kejang kag 
+## 197                                                                                                         dikunyah pelan ngo      
+## 198                                                                                                         dikunyah pelan ngo      
+## 199                                                                             yaallahh aku ming jaluk pajak jadian dikiro ngecroh 
+## 200                                                                                                         dikunyah pelan ngo      
+## 201                                                                                                         dikunyah pelan ngo      
+## 202                                                                                                         dikunyah pelan ngo      
+## 203                                           pajak naik penghasilan negara naik buat bansos subsidi bangun infrastruktur dll paham 
+## 204                                                                                     saya mau lupa efin cara urusnya bagaimana ya
+## 205                                      paket hemat belum minum belum pajak kayaknya kalo paketan standar sekitar an tinggal kali  
+## 206                                                                                                        dikunyah pelan ngo       
+## 207                  kode transaksi faktur pajak terdiri dari sembilan jenis angka  yang masingmasing penggunaannya berbeda   penggu
+## 208                   tanpa jd investor di ikn gw malah gak mau bayar pajak lagi ke pemerintah lah uang pajak hanya utk di korupsi m
+## 209                  kesulitan membuat pembukuan terlalu sibuk jualan ribet bawa kertas amp  pulpen  tenang kan ada sobatbuku semua 
+## 210        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 211                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 212                                                                                                       siap malak pajak jadiann  
+## 213             dijamu kbri thailand lanyalla jelaskan mengapa harus kembali ke sistem asli indonesia  bangkokpenerimaan negara buka
+## 214                                          bea cukai berikan pengawasan dan asistensi di tiga daerah ini  berita selengkapnya di  
+## 215                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 216           kode dan nsfp tersebut terdiri atas enam belas digit dua digit pertama adalah kode transaksi dan satu digit berikutnya
+## 217                              min mau tnya misalnya pt a mau membagikan dividen kepada pemegang saham op itu dikenakan pph final 
+## 218                open joki   joki tugas accurate amp  myob  joki ujian sertifikasi accurate cap  joki ujian brevet pajak ab  joki 
+## 219        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 220                             hallo min  saya gak bisa cetak spt nih gimana solusi nya sudah coba pakai new incognito window juga 
+## 221              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 222                                                     saya kirim barang dari medan ke bandung  dus besar yg kira semuanya total h 
+## 223                           makanya pembangunan smelter dan hilirisasi nikel d dalam negeri harus dipercepat supaya produksi nikel
+## 224                                                                      tolong di cek  yg sok kaya itu kali aja dia ngemplang pajak
+## 225     progam inklusi kesadaran pajakdengan memasukkan materi pajak dalam rpsjuga menjadi salah satu tujuan kerja sama yang dibahas
+## 226                         kerja sama tax center bertujuan meningkatkan kepedulian masyarakat tentang pajak ujar roos kabid p humas
+## 227        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 228                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 229                                                                                    dua juta rupiah buat kalan dipotong pajak  ya
+## 230        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 231                                            gapapa uang pajak emang seharusmya dikembalikan ke rakyat biar ekonomi tetap berjalan
+## 232        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 233        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 234          saat berdialog saya jelaskan tentang mengapa kita harus kembali ke sistem asli indonesia sebab salah satunya penerimaan
+## 235                                                                min jam  wib masih gabisa login enofa password udah bener padahal
+## 236                                      cara cek npwp aktif atau tidak  kawanpajak dapat melakukan pengecekan npwp melalui  dengan 
+## 237                                                                               orang kaya dengan cara halal mah rutin bayar pajak
+## 238                                                                                                an kaaa jgn lupa ada pajak ya kak
+## 239                                  boleh dibantu aturan mengenai selisih kurs pengakuannya di aturan pajak utk usaha ekspor impor 
+## 240                                                                                                    sudah bayar melalui pajak kok
+## 241        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 242                                         kenapa yah semua npwp udah saya coba buat forgot password tapi semuanya begini di enofa 
+## 243                hampir  persen tambang nikel dikontrol asing china dengan insentif tax penghasilan free     hasilnya dieksport ke
+## 244                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 245                             mau nanya apakah web efaktur lagi bermasalah daritadi tidak bisa login katanya pasword salah padaha 
+## 246                             baik kak terimakasih infonya tadi setelah error keduanya akhirnya dicoba mode incognito dan bisa ta 
+## 247                    bisnis is bisnis say di situ ada pertumbuhan ekonomi dan ada org yg dipekerjakan juga ada pajak yg dibayarkan
+## 248        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 249          ikn sudah di sediakan tanahnya dan di tawar tawarkan kesana kemari walaupun dg iming iming sampai bebas pajak  tahundan
+## 250                                     polri sat lantas jakbar amp  dishub melaksanakan pengalihan arus lalu lintas imbas proyek g 
+## 251           apa ini bentuk uu suversif gaya baru dalam kemasan rkuhp kalau   ngakunya anti orba tapi lawan politik mau terus merek
+## 252                              dewasa tidak ditandai dengan nsfw dewasa ditandai dengan bulan maret kamu stress isi efilling pajak
+## 253                  pertama kali nyobain yakiniku like di transicon surabaya baru buka  november ini aku pilih yang garlic chicken 
+## 254                                                                           yaahahahah dikira yg bayar pajak lo doang idih idihhhh
+## 255                                            sore min mau nanya fitur espop di djp sebelah mana ya saya cek di aktivasi fitur gada
+## 256        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 257                                   kmrn yg penggeladahan dari isilop kenapa sampe skrg gak update yakk pdhl kupikir itu krn pajak
+## 258                                               boleh tanya dasar aturan utk pengajuan pengurangan sanksi pajak yang masih berlaku
+## 259                                                                               eregistrasi pajak  registrasinpwp banggabayarpajak
+## 260                            iya sdh approval success trs solusinya bgmn ya min krn supplier tdk mau menerima nilai yg kami retur 
+## 261                                              beli iphone dr luar negri nyampek bandara kudu dftar imei dan kena pajak wkwkkwkwkw
+## 262                          bisakah wp melakukan perubahan data amp  pindah kpp scr online amp  jika hrs offline bisakah dikuasakan
+## 263                 polri sat lantas jakbar amp  dishub melaksanakan pengalihan arus  lalu lintas imbas proyek galian penampungan a 
+## 264                          terdapat kriteria rekening dormant yaitu rekening tidak aktif selama  bulan tidak ada mutasi lain sela 
+## 265                             hallo admin saya mau lapor ppn untuk normal saya ada lebih bayar tapi saya ada pembetulan karna per 
+## 266                                hai kak mohon maaf atas ketidaknyamanannya sampai saat ini belum ada informasi resmi terkait err 
+## 267                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 268        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 269                                                                                                                 pajak jomblo kah
+## 270                            min beberapa hari yang lalu aku kan menang giveaway terus ternyata barang nya mhal bangettekdtil lag 
+## 271                           kok jadi repot ya  jadinya kayak gitu ada sejumlah uang yang harus disetor oleh karyawan ke negara ka 
+## 272                                 hai kak untuk perubahan penandatangan efaktur bisa ditambahkan dari aplikasi efaktur sedangkan  
+## 273             dijamu kbri thailand lanyalla jelaskan mengapa harus kembali ke sistem asli indonesia  bangkokpenerimaan negara buka
+## 274              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 275                                             beli iphone dr luar negri nyampek bandara sudah disuruh daftar imei dan bayar pajak 
+## 276        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 277                     apakah km dh menangkat beban negara hari ini ap aj mmgnya ngab   nambahin pemasukkan ke negara yaitu pajak  
+## 278               sanksi maupun denda hanya akan dikenakan untuk wp yang berstatus pkp namun tidak melaporkan spt masa ppn   tksyndi
+## 279                                 hai kak apabila wp berstatus non pkp maka tidak ada kewajiban untuk melaporkan spt masa ppn dan 
+## 280                                                                              pajak pajakan ribet bgt mau tereak bawaanye anj lah
+## 281                                                    satu aj dr sekian banyak janjinggk usah repotrepot bnyk janjirb tmn ya bukti 
+## 282        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 283                                                                                  twitnya pasti langsung jadi inceran orang pajak
+## 284                            hai open joki tugas realtime ujian take home atau quiz bisa dm atau whatsapp ke  saja  spesialisasi  
+## 285                                                                                yuk kawanpajak simak infokeu kurs pajak terbaru  
+## 286                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 287          kode transaksi merupakan bagian yang harus ada dalam faktur pajak yang memuat keterangan tentang penyerahan bkp danatau
+## 288           kode dan nsfp tersebut terdiri atas enam belas digit dua digit pertama adalah kode transaksi dan satu digit berikutnya
+## 289                                min mau curhat mau validasi nik dan npwp ketika klik validasi bisa dan langkah berikutnya kan kl 
+## 290                  kode transaksi faktur pajak terdiri dari sembilan jenis angka  yang masingmasing penggunaannya berbeda   penggu
+## 291              menurut data yang diungkapkan oleh djp angka penerimaan pajak karyawan justru mengalami kenaikan ditengah banyakny 
+## 292        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 293                  haloo min saya udah bayar pajak tahunan stnk untuk kertas nya itu harus di ambil disamsat ya harus bawa apa aja
+## 294                                                               ku menangis kirim paket keluar batam mahalan pajak daripada ongkir
+## 295                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 296                  kinerja perpajakan dalam apbnkita menunjukkan hasil positif  hingga  oktober  penerimaan perpajakan indonesia t
+## 297                                                                                               pajak nya super anjg guede mampus 
+## 298                                                                    format dan tata cara penggunaan kode nomor seri faktur pajak 
+## 299                  hai kak silakan kakak melakukan pembetulan spt agar pelaporan tersebut benar lengkap dan jelas ya kak   tksyndi
+## 300              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 301                                                                            pala gue sakit ngerjain pajak mikirin ngewar sg juga 
+## 302                   saat hujan tentu dia akan memilih mobil tapi hal ini tidak akan terjadi kalau kamu pakai motor beat injeksi   
+## 303                hari terakhir lapor pajak tbtb  etax gabisa dibuka lgsg cepet cari cara diyutub dan bisa yaallah udah menangis d 
+## 304                                                                   sudah min sudah bisa dilapor setelah di restart browser nya tq
+## 305            terima kasih atas kepercayaan kawanpajak kepada djp  djp terus meningkatkan kualitas layanan kepada kawanpajak agar s
+## 306                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 307                selamat sore semua nya membahas konten pajak yang sering kalian denger soal npwp kalian tau gak sih fungsi nya a 
+## 308                                selamat pagi temankeu   mulai hari rabu dengan cek infokeu kurs pajak terbaru yuk   selengkapnya 
+## 309                                 cara cek npwp aktif atau tidak  kawanpajak dapat melakukan pengecekan npwp melalui  dengan mudah
+## 310          perundingan ke sudah dijadwalkan di akhir  saya berharap perundingan akan mengalami kemajuan termasuk untuk isu pengada
+## 311                                  namun untuk emas batangan selain untuk cadangan devisa sesuai siaran pers spkli mendapat fasil 
+## 312                                                              akhir taun kapan kelarnya aku udh mual sama pajak inflasi tuhannnn 
+## 313                         abis coromodol langsung berjuang pertahanin popularitas apaapaan ini inflasi  pajak diesel naik wakakaka
+## 314                        untuk ppn apabila emas batangan tersebut adalah emas batangan untuk kepentingan cadangan devisa negara s 
+## 315                             hai kak apabila data faktur pajak keluaran dan masukan di aplikasi efaktur sudah approval sukses se 
+## 316                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 317                                                                                                            gak jelas ih ni pajak
+## 318                                        jika ada ssp yang telah dibayar dan dilaporkan apakah ssp tersebut dapat di pbk ya kak   
+## 319                                                                                   kasian  gak punya  gimana pandemi udah rebuta 
+## 320                         apabila tidak ada npwp untuk pembeli berstatus orang pribadi maka dapat menggunakan nik jika pembeli be 
+## 321                 tetapi lanjut daranee setiap tahun kita lakukan evaluasi jika tidak berprestasi anggaran pajak tadi bisa kita a 
+## 322                daranee tetapi anggaran dari pajak atas produk yang melawan kesehatan juga cukup besar tetapi dana dari pajak te 
+## 323               yang menarik dari sisi pembiayaan olahraga tidak semua ditanggung oleh pemerintah melainkan diambilkan dari pajak 
+## 324                           hai kak pemungut pph pasal  adalah badan usaha yang melakukan penjualan emas batangan di dalam negeri 
+## 325                                                                                   wakakakkaak sama dirjen pajak ini mah sekalian
+## 326                           hai kak apabila belum pernah aktivasi efin kakak dapat mengajukan aktivasi efin melalui email kpp dan 
+## 327                                uang mengendap di bank itu banyak keuntungannya gt anggap aja di bank ainterest nya  pa contoh k 
+## 328                              hai kak apakah sampai saat ini masih mengalami kendala bisa diinfokan untuk notifikasi errornya se 
+## 329                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 330             dijamu kbri thailand lanyalla jelaskan mengapa harus kembali ke sistem asli indonesia  bangkokpenerimaan negara buka
+## 331                          di pemberi kerja yg lama seharusnya dibuatkan bukti potong pada saat pegawai berhenti bekerja nanti di 
+## 332  sobat gasiers silakan simak tips amp  triks penggajian implikasi atas karyawan yang baru memiliki npwp di tengah tahun berjalan
+## 333                              selamat sore mau tanya jika kita menggunakan sistem serverclient di efaktur di  komputer apakah bi 
+## 334                                       coba diubah pertanyaannya dulu cuma dapat  miliar usd riil yg masuk berapa sekarang jadi  
+## 335                                maybe kantor pajak korea akan datang ke kantor ahook hancur kau ceo ahookgunakan kartu perusahaa 
+## 336                            hai kak apakah sdh dipastikan menggunakan db yang benar jika aplikasi sudah registrasi seharusnya ti 
+## 337                         silahkan bergabung ke dalam whatsapp group gasitips amp  trik penggajian kami di  dan akses gasi website
+## 338                             hai kak tidak bisa disambung ya karena perusahaan dalam satu grup bukanlah satu entitas yang sama j 
+## 339                                                selain itu silakan dicoba langkah berikut   pastikan internet stabil   clear cac 
+## 340                                             hai kak  mohon maaf atas ketidaknyamanannya sampai saat ini belum ada informasi res 
+## 341                            hai kak untuk format excel kosongan sementara belum bisa diunduh secara mandiri oleh wp jika ingin f 
+## 342              hotel sahid dan rumah sakit a dadi tjokrodipo di bandar lampung tunggak bayar pajak beberapa tahun tagihan mencapa 
+## 343                                                                                kak ini harga sudah include pajak dan tax ke indo
+## 344                                      hai kak mohon maaf atas ketidaknyamanannya apakah ada keterangan error yang muncul  tksyndi
+## 345              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 346              saat ini negara hanya menjadi pemberi ijin atas konsesi tambang dan lahan yang dikelola total oleh swasta nasional 
+## 347               dijamu kbri thailand lanyalla jelaskan mengapa harus kembali ke sistem asli indonesia  bangkokpenerimaan negara b 
+## 348                                sore min mau tny kalau misal mau cabut npwp wp op krn sdh meninggal di th  apa bs ya dengan meng 
+## 349                                                                centang biru twitter berbayar ditunda diduga hindari pajak apple 
+## 350                   tahukah kawanpajak  dalam pengenaan pajak atas makanan dan minuman terdapat  jenis pajak yaitu pajak pusat da 
+## 351                                hai kak bisa dijelaskan secara detail terkait transaksi yang dilakukan terkait pemungutan pph pa 
+## 352                                                                            hai kak samasama ya kak senang bisa membantu  tksyndi
+## 353                                                                        sinjai fokus rampungkan materi ranperda pajak distribusi 
+## 354                                        pajak membangun daerah menunaikan kewajiban sebagai warga negara yg baik  yukkbayarpajak 
+## 355                          gapok kecil krn perusahaan mau ngurangin pajak sama thr juga sbenernya aman aja kl tunjangannya benchm 
+## 356                  mau untung pakai seabank tabungan di bawah  juta tidak ada pajak bunga   install app seabank  daftar akun seab 
+## 357                                                                                             bagaimana jika nomor efin npwp lupa 
+## 358                        hai kak mohon maaf atas ketidaknyamanannya silakan kakak konfirmasi dengan kpp terdaftar terkait perbeda 
+## 359                            tugu sepatu tugu sepeda tugu peti mati tugu bambu di rusak si anus sndri koq luh nge ngegonggong sih 
+## 360                                                                                              nah banser hebat  taat bayar pajak 
+## 361                 seneng bgt mamakku udah mulai ngedukung aku pake dress lucu mbak tadi di pajak mamak ada nampak baju selutut kl 
+## 362                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 363                                                                           lah dikira negara ngegaji orang nganggur gitu ta  kit 
+## 364                                      kliennya itu pihak yg berhak dg npwp itu apa nggak coba cek ke bendaharawan nya langsung b 
+## 365                   faktanya ekonomi nyungsep jadi g bisa terwujud rumah tiap warganya pajak naik kebutuhan pokok g bisa dikontrol
+## 366                          pajak bisa jadi kawan atau lawan anda keahlian aocadvisory bisa mencegah salah memperlakukan pajak anda
+## 367                                      cara cek npwp aktif atau tidak  kawanpajak dapat melakukan pengecekan npwp melalui  dengan 
+## 368                                                  gunakan private window mozillaincognito window chrome untuk membuka djp online 
+## 369                                                                                               turun biaya hidup sama bebas pajak
+## 370                                                      yuk bisa banget kak aku udh lewat matkul perpajakan    dan praktikum pajak 
+## 371                                 hai kak apakah sudah upload tersebut maksudnya adalah sudah approval success jika iya nota retu 
+## 372                                           hai kak mohon maaf atas ketidaknyamanannya apakah saat ini masih mengalami kendala yg 
+## 373                                                         padahal gaji dan fasilitasnya uang dari pajak negara  bukan dari relawan
+## 374                                                                                                                             sama
+## 375                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 376                                                                            need bikin pertanyaan ttg pajak drop fee sekalian yaa
+## 377                                                                                     cara lengkap isi spt pajak dua perusahaan s 
+## 378                                                             bisa naikturun tp stabil di  per hari  reksadana bebas pajak  aku b 
+## 379                          halo kawanpajak  seluruh kantor pajak membuka layanan setiap hari senin sampai dengan jumat pukul    w 
+## 380                                             hahaha otakmua nggak nyampe harga  di shanghai itu ore kan trus di indonesia dijual 
+## 381            bhabinkamtibmas polsek pangaribuan brigadir wahyudi menghadiri undangan sosialisasi pajak bumi bangunan dan musyawara
+## 382                for sale  toyota corolla dx tahun  warna dolphin blue mesin sehat ac dingin siap dipakai daily pajak on maret  in
+## 383                            hai kak apabila belum pernah aktivasi efin atau lupa efin kakak dapat mengajukan aktivasi efin melal 
+## 384                                                                                  mau cetak spt gabisa nih min gimana mau laporan
+## 385                                sore min mau tanya  apakah ada dasar hukum bahwa tanah bukan mrpkn objek ppn    apakah aset beka 
+## 386                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 387                                                                                                    oiyaa kemenkeunya bukan pajak
+## 388                           selain itu silakan dicoba langkah berikut  pastikan internet stabil  clear cache amp  cookies pada br 
+## 389           tahukah kawanpajak  dalam pengenaan pajak atas makanan dan minuman terdapat  jenis pajak yaitu pajak pusat dalam hal i
+## 390                 nik  npwp  sebagai wujud implementasi reformasi pajak untuk layanan perpajakan yang menyeluruh kawanpajak dapat 
+## 391                         klo di bandara ya normal sih pajak lagian gk tiap hari jga traveling tapi nek warung sederhana yo wegah 
+## 392             ibu sri mulyani indrawati luncurkan aplikasi satu kemenkeu untuk memperkuat budaya organisasi baru di kementerian k 
+## 393                           hai kak mohon maaf atas ketidaknyamanannya sampai saat ini belum ada informasi resmi terkait error pa 
+## 394                                             hahaha otakmua nggak nyampe harga  di shanghai itu ore kan trus di indonesia dijual 
+## 395                                                          penerimaan pajak  t lain lain t apbn t mesti pinjam lagi  diatas t hmmm
+## 396                            selamat sore untuk proses pemberian data efaktur yang diminta secara langsung paling lama  hari kerj 
+## 397                                  selain itu silakan dicoba langkah berikut  pastikan internet stabil  clear cache amp  cookies  
+## 398                                 hai kak mohon maaf atas ketidaknyamanannya sampai saat ini belum ada informasi resmi terkait er 
+## 399                           min mau tanya lagi berkaitan dengan pertanyaan pertama saya diatas jika pt a menagih biaya pajak untu 
+## 400         mungkin hanya layanan drive thrue perpanjangan pajak stnk di samsat sidoarjo yang masih ada tarikan biaya parkirnya min 
+## 401                            selain itu silakan dicoba langkah berikut  pastikan internet stabil  clear cache amp  cookies pada b 
+## 402                                                                            waaa duit pajak gua buat gaji orang belajar typing eh
+## 403                            iya barang kan keluar dari gudang di jawa barat tapi untuk administrasi nya diurus oleh kantor pusat 
+## 404                            jangan lupa untuk terus update info kurs pajak ya bala becus berlaku tanggal   november    desember  
+## 405                             hai kak mohon maaf atas ketidaknyamanannya sampai saat ini belum ada informasi resmi terkait error  
+## 406                                                              sisa satu bulan djp yakin bisa tembus target penerimaan pajak rp t 
+## 407                           selamat sore untuk validasi ephtb lebih dari  ssp silakan melakukan validasi ntpn secara manual ke kp 
+## 408                                                                hai kak silakan mengikuti petunjuk pada link berikut ya   tksyndi
+## 409                                              gabisa di cetak ga ada hasil downloadnya udh di coba di pc sm laptop ttep sama kak 
+## 410              mas hansol ampe bilang kalau udah diperiksa kantor pajak udah gabisa lari kemana lagi nah pertanyaan nyaa ini petu 
+## 411                                                              haha alhamdulillah keren bangjng lupa juga bayar pajak nya ya bang 
+## 412                            selain itu silakan dicoba langkah berikut  pastikan internet stabil  clear cache amp  cookies pada b 
+## 413                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 414              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 415         dirjen pajak pimpin pertemuan asia initiative ketiga di spanyol  dirjen pajak suryo utomo memimpin jalannya kegiatanthir
+## 416            tata cara riset di direktorat jenderal pajak  bagi kawanpajak yang ingin melaksanakan riset terkait perpajakan di djp
+## 417                             hai kak mohon maaf atas ketidaknyamanannya sampai saat ini belum ada informasi resmi terkait error  
+## 418                                 cara cek npwp aktif atau tidak  kawanpajak dapat melakukan pengecekan npwp melalui  dengan mudah
+## 419                ikn sudah di sediakan tanahnya dan di tawar tawarkan kesana kemari walaupun dg iming iming sampai bebas pajak  t 
+## 420                               hai kak mohon maaf atas ketidaknyamannya apakah saat ini masih terkendala kami menyarankan jika d 
+## 421                  kinerja perpajakan dalam apbnkita menunjukkan hasil positif  hingga  oktober  penerimaan perpajakan indonesia t
+## 422            terima kasih atas kepercayaan kawanpajak kepada djp  djp terus meningkatkan kualitas layanan kepada kawanpajak agar s
+## 423                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 424                                                                                   tolong dipantau  ini wajib pajak potensial nih
+## 425                         hai kak untuk keperluan perubahan data memang npwp harus berstatus aktif apabila nanti setelah perubaha 
+## 426                          jadi intinya pemotongan hanya boleh dari dpp keseluruhan faktur ya kalau tidak ada pembuktian barang y 
+## 427                 jadi walaupun memakai final tapi sdh ada laba selisih kurs maka tetap dikenakan tarif umum atas selisih kursnya 
+## 428        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 429                                          hai kak mohon maaf atas ketidaknyamanannya ya kak untuk tindak lanjut terkait proses t 
+## 430                                                                                       hahaha yha yg bayar pajak dikit ntar kwkwk
+## 431                         hai kak kewajiban perpajakan pada profil djp online tersebut bisa diabaikan saja karena bukan berarti k 
+## 432        jokowi dilawan  setelah kalah di wto indonesia wajib mengijinkan ekspor bahan mentah nikel ke eropa  jokowi dengan santai
+## 433                                  bikin lampu penerangan jalan boz banyak jalan gelap lagian tiap tahun juga rakyat bayar pajak b
+## 434                               hai kak direktorat peraturan perpajakan ii beralamat di kantor pusat djp jalan gatot subroto kav  
+## 435             jasa raharja akan terus menudukung upt samsat  dalam setiap kegiatan yang dapat meningkatkan penerimaan pajak kenda 
+## 436                     kegiatan ini juga didampingi jajaran satlantas polres pinrang   jasa raharja bersama upt samsat pinrang aka 
+## 437               berlokasi di jalan poros pinrangparepare jasa raharja dan upt samsat pinrang gencar mengadakan kegiatan penertiba 
+## 438                            hai kak mohon maaf kami tidak dapat mengirimkan kartu npwp elektronik kakak dapat memperoleh npwp el 
+## 439                                                                                                  min  pak  pajak nya tertib kan 
+## 440                 nik  npwp  sebagai wujud implementasi reformasi pajak untuk layanan perpajakan yang menyeluruh kawanpajak dapat 
+## 441                                    masalahnya klien saya ini kekeh kalo npwpnya tidak ada perubahan dan tetap memberikan yg lam 
+## 442         khusus jabodetabek area pinjaman kta dari bank asing maksimal  juta     syarat ktp cc npwp     pakai bukti potong pajak 
+## 443                                            sspnya perlu diinput dulu ke bagian ini atau tidak atau lgsg ke spt induk bagian iii 
+## 444                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 445       sebentar lagi liburan akhir tahun banyak dari kita mungkin akan ke ln untuk berlibur mungkin pulangnya mau bawa device ele
+## 446                                                  akalan perusahaan gamau bayar pajak dan bpjs perusahaan kayak gini tuh brengsek
+## 447                                                     hai kak terkait objek pph atau ppn kak apakah kakak pkp atau non pkp tksilla
+## 448                                        alternatif lain kakak juga dapat mencetak spt pada aplikasi efaktur desktop ya    tksyndi
+## 449                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 450                                                             setiap pembayar pajak mestinya diberi kewenangan bersuara sperti me 
+## 451                                                                                                              bayar pajak gmn nih
+## 452                                jika masih tidak bisa kakak bisa lakukan langkah berikut    hapus semua sertifikat elektronik se 
+## 453                            hai kak  silakan jelaskan lebih detail kendala yang kakak alami hal ini terjadi ketika mengklik menu 
+## 454                               hai kak mohon maaf atas ketidaknyamanannya jika pada saat klik cetak spt tidak bisa silakan lakuk 
+## 455                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 456                                      untuk detail contoh perhitungannya dapat kakak lihat pada lampiran pmkpmk tersebut  tkslati
+## 457                            namun jika angsuran pph pasal  untuk wajib pajak baru tersebut tidak termasuk dalam pasal  dan pasal 
+## 458                            apakah kakak masuk kedalam definisi wajib pajak baru tersebut jika iya angsuran pph pasal  wajib paj 
+## 459                           selamat sore kak wajib pajak baru adalah wajib pajak orang pribadi dan badan yang baru terdaftar pada 
+## 460                          hai kak sebelumnya kakak sudah pernah aktivasi efin jika belum silakan aktivasi terlebih dahulu via em 
+## 461                                                                      oh sudah bisa min akhirnya boleh di notify ke temen lainnya
+## 462                                                                hai kak silakan mengikuti petunjuk pada link berikut ya   tksyndi
+## 463                                         npwp kalo depannya  itu kayaknya bendahara pemerintah pusat atau daerah dan setahu saya 
+## 464                                                                      jika tidak bisa dibuktikan maka semuanya masuk dpp  tksilla
+## 465                                                                                     hai kak  ada yang bisa taxmin bantu  tkspadi
+## 466                             jadi bisa dikeluarkan dari dpp pph pasal  atas pengadaanpembelian barang atau material yg terkait d 
+## 467                               baik terima kasih artinya tdk perlu diinput ke form b dulu ya min lgsg saja diinput ke spt bagian 
+## 468                              dalam hal tidak terdapat bukti ini jumlah bruto sebagai dasar pemotongan pph pasal  adalah sebesar 
+## 469                                                             min web enofa lagi error login udah bener passwordnya kgk bisa masuk
+## 470                            pembayaran ini tidak termasuk dalam jumlah bruto sebagai dasar pemotongan pph pasal  sepanjang dapat 
+## 471                            tidak termasuk pembayaran kepada penyedia jasa atas pengadaanpembelian barang atau material yang ter 
+## 472                         hai kak  betul kak untuk contoh penerapan pengkreditan pajak masukan tersebut dapat kakak lihat dalam l 
+## 473                                  oleh badan pemerintah subjek pajak badan dalam negeri penyelenggara kegiatan bentuk usaha teta 
+## 474                               hai kak atas transaksi jasa badan dgn badan yg terutang pph pasal  untuk dpp jasa selain jasa kat 
+## 475                                                                                      hai kak ada yang bisa taxmin bantu  tkstyah
+## 476                                                                                         saya kurang mengerti min bisa open dm ga
+## 477                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 478                             oh emang niat mo tawuran knapa pemecah belah anak negeri begini masih jadi beban apbn  rakyata susa 
+## 479                                                               aku yo pemilih potensial pembayar pajak untuk negara punya pengar 
+## 480              kalian yang bayar pajaknya udah setinggi umr jakarta u guys are getting robbed in daylight for a literal better ci 
+## 481                               selain itu silakan dicoba langkah berikut   pastikan internet stabil   clear cache amp  cookies b 
+## 482                                                                        sinjai fokus rampungkan materi ranperda pajak distribusi 
+## 483                                  hai kak mohon maaf atas ketidaknyamanannya  apakah ada kode error yang muncul jika ada silakan 
+## 484                                                                                     hai kak  ada yang bisa taxmin bantu  tkspadi
+## 485                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 486                                                             hahahaha duit pajak gw dibuangbuang bwt beli power bank dikasih roda
+## 487                          hallo   apabila kita punya project dengan pemerintah yang mana pegawai kita yang mengerjakan project t 
+## 488                             hai kak sesuai penjelasan taxmin sebelumnya konfirmasi kembali ke pemeriksapetugas di kpp terdaftar 
+## 489                                                                        sinjai fokus rampungkan materi ranperda pajak distribusi 
+## 490                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 491              penyuluh kpp pratama karanganyar adang juwanda juga menyampaikan materi terkait peran pajak dalam apbn dan kewajib 
+## 492                                                                                              seperti ini untuk surat tegurannya 
+## 493                         kegiatan dimulai pukul  wib dan diakhiri pukul  wib dengan mengundang sekitar  wajib pajak pelaku usaha 
+## 494                 kantor pelayanan pajak kpp pratama karanganyar mengadakan kegiatan bussiness development services bds dengan te 
+## 495              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 496                             hahahhahahahhahahaini perusahaan ngakalin biar pajak sm bpjs yg mereka bayar ga tinggi nanti ngaruh 
+## 497                           min mau tanya di bulan september saya ada lb misal  jt kemudian lb tersebut saya kompen ke bulan okto 
+## 498              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 499                                                silakan penghasilan tersebut kakak identifikasi lagi jika masuk ke pengertian ua 
+## 500                                                 hai kak  ketentuan terkait pesangon dan uang manfaat pensiun diatur dalam perat 
+## 501                                                                                                        mayoritass kata siapa mk 
+## 502                           halo min  mau nanya kalo kita melakukan pembetulan pada spt ppn masa  dan terjadi kurang bayar lagi m 
+## 503                           jika sesuai article  tsb maka atas penghasilan tsb hanya dipajaki di india namun kakak selaku pemberi 
+## 504                                                                                                hai kak silakan cek dm ya tksilla
+## 505                        hai kak   jika wpln badan sepanjang tdk memiliki but di indonesia amp  menyerahkan tanda terima skd wpln 
+## 506                          apabila transaksi yang dilakukan tidak jadi dibatalkan maka lawan transaksi tidak perlu membatalkan fa 
+## 507                                                    bagaimana cara menghitung pajak trading forex     inbizia pajak tradingforex 
+## 508                               hallo min maaf mau bertanya mengenai jasa transportasi kode pajak  untuk pembuatan faktur yg bena 
+## 509                             siang min kalau nama di npwp op salah bgmn prosesnya untuk dibetulkan untk update data tdk bisa krn 
+## 510              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 511                                                               ditjen pajak optimistis penerimaan pajak  capai target rp triliun 
+## 512                             hai kak pembatalan faktur pajak tidak bisa dilakukan sebelah pihak oleh penjual dibutuhkan konfirma 
+## 513                                          apakah pembelian apartemen oleh op bisa dikategorikan investasi dividen bkn objek pajak
+## 514                                             dilakukan oleh badan min usaha pom bensin semacam frenchise pertashop dari pertamina
+## 515                                             hahaha otakmua nggak nyampe harga  di shanghai itu ore kan trus di indonesia dijual 
+## 516                                  sebagai informasi untuk kode eror etax pastikan kembali untuk tanggal faktur pajak dan masa pa 
+## 517                             hai kak untuk kms silakan diinputkan pada induk spt bagian iii ya kak  kolom jumlah dpp diisi denga 
+## 518                 kemudian tiga belas digit berikutnya adalah nsfp yang diberikan oleh direktorat jenderal pajak djp  untuk lebih 
+## 519              kode dan nsfp tersebut terdiri atas enam belas digit dua digit pertama adalah kode transaksi dan satu digit beriku 
+## 520              yuk kenali jenis dan saat penggunaan kode transaksi faktur pajak  kode transaksi merupakan bagian yang harus ada d 
+## 521                                        pak  rakyat kepingin subsidi bbm subsidi pupuk amp   kembalikan tarif pajak yg muahal se 
+## 522                                       hai kak silakan melakukan self assessment apakah jasa yg diberikan termasuk dlm pmkpmk ya 
+## 523                            hahaha itu ngaruhnya nanti di uang pisah kalau kena phk sama bonus aja karena nanti biasanya dihitun 
+## 524                        tahukah encik dan puan jika di mal pelayanan publik mpp pekanbaru kita bisa membayar pajak kendaraan lho 
+## 525                 nik  npwp  sebagai wujud implementasi reformasi pajak untuk layanan perpajakan yang menyeluruh kawanpajak dapat 
+## 526                                 hai kak baik terima kasih sudah menghubungi kring pajak apabila ada pertanyaan lain seputar per 
+## 527                             mgkn kah ini negara satunya yg ga bisa sewa stadion nasionalnya sendiri sampai harus minta diskon t 
+## 528                for sale  toyota corolla dx tahun  warna dolphin blue mesin sehat ac dingin siap dipakai daily pajak on maret  in
+## 529                         apabila setelah dipastikan data yang diinputkan sudah sesuai dan masih mengalami kendala kakak dapat me 
+## 530                      sinii kaa aku anak akuntansi pajak juga dah biasa take skrips juga nii langsung wa di bio ya untuk fastresp
+## 531                                                                                                          kang parkir pajak sambu
+## 532                          kemudian tutup efakturnya kemudian buka kembali dengan klik kanan  run administrator apabila sudah men 
+## 533                             pastikan tanggal faktur pajak tidak mendahului tanggal ppbj    pastikan kembali data ppbj melalui s 
+## 534                           hai kak  mohon maaf atas ketidaknyamanannya apabila notifikasi error yang muncul nomor dokumen ppbj t 
+## 535                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 536                                 hai kak untuk wp badan pihak yang menandatangani  permohonan pbk merupakan pengurus sesuai pasa 
+## 537                             kunjungi website  dan dapatkan informasi lainnya seputar pajakekonomi dan keuangan  pajakcom niknpwp
+## 538                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 539                          hai kak  kemungkinan hal tersebut dikarenakan npwp bendahara dihapus secara jabatan oleh kpp   saat in 
+## 540                                                                              bpjs sama thr sih kalo pajak pake total penghasilan
+## 541                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 542                             hai kak silakan pastikan sinkronisasi kode cap sudah sesuai langkah dibawah ini  buka menu referens 
+## 543                pphtb siapa yang bayar  kawanpajak habis beli atau jual rumah masih bingung siapa yang harus bayar pajak penghas 
+## 544                  dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogor  ac
+## 545                      dijual scorpio cc custom  double jok caferacer amp  bratcafe   surat lengkap taat pajak plat   plat f bogo 
+## 546                                                 sesuai pasal  ayat  perpj sttd perpj tanggal pembuatan faktur merupakan tanggal 
+## 547                                                saat pembuatan faktur pajak diatur pada pasal  perpj sttd perpj untuk faktur paj 
+## 548                               hai kak  dalam ketentuan perpajakan tidak diatur mengenai invoice atau surat jalan yang diatur ad 
+## 549                            besok  presiden  menyerahkan dipa dan rincian alokasi tkd  ke pimpinan kl dan kepala daerah   apa itu
+## 550           ada yang ikut kelas kemenkeu mengajar hari ini   temankeu yang sekolah di smp  jakarta hari ini belajar langsung sama 
+## 551                              tanah hutan  tambang sudah diobral pajak dibebaskan tenaga kerja asing bebas masuk terus manfaatny 
+## 552                                         pajak nya dinaikan   pk de klo ngotot mrk mau beli mentahny tanpa bangun smelter di nkri
+## 553                 maka di tahun depan pemerintah bakal masif melakukan pemadanan data kependudukan dengan npwp format  digit yang 
+## 554                                                                                 selengkapnya dapat kakak lihat pada      tksbudi
+## 555                          sore ka   bagaimana yaa solusinya jika lapor spt ppn lb lupa mencentang pilihan di point iih spt induk 
+## 556                           pengintergrasian nik dan npwp ditetapkan melalui peraturan menteri keuangan pmk pmk tentang nomor pok 
+## 557                        wajib pajak dapat mengungkapkan harta yang belum atau kurang diungkapkan dalam surat pernyataan dan tela 
+## 558                                hai kak penerapan sepenuhnya nik sbg npwp orang pribadi akan dilakukan  januari  wp op masih tet 
+## 559                           hai kak  setelah periode pps selesai maka aturan terkait pasfinal mulai berlaku kembali secara umum w 
+## 560                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 561                         gapok setauku ngaruh di bpjs sama pajak nder perusahaan biasanya ngecilin gaji pokok biar pajaknya kecil
+## 562                                                           dijual mobil suzuki sx  bandung pajak  asuransi oktober  jt hub   bee 
+## 563                                                  hai kak pertanyaan kakak sudah terjawab pada tautan berikut ya kak   jika ada  
+## 564           kurs yg digunakan nantinya untuk pembuatan bupot pph menggunakan kurs pada saat terutangnya pajak penghasilan  tksilla
+## 565                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 566         baik kemudian untuk peraturan turunan terkait ppn atas barter ini ada tidak ya min seperti aturan di pmkper atau lainnya
+## 567                for sale  toyota corolla dx tahun  warna dolphin blue mesin sehat ac dingin siap dipakai daily pajak on maret  in
+## 568                          hai kak jika yg ditanyakan adalah supporting dokumen lain yg dibutuhkan atas invoice yg menggunakan us 
+## 569                                                            yaallah mau pacar yg nganterin kebab soalnya gamau kena pajak sopipud
+## 570                                                                         pinter mengendus yang punya usaha tapi ngak bayar pajak 
+## 571                                         hai kak apakah yg dimaksud adalah skb pph pasal  sesuai per jika iya tidak diatur terka 
+## 572                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 573                                selamat pagi temankeu   mulai hari rabu dengan cek infokeu kurs pajak terbaru yuk   selengkapnya 
+## 574                                                                                                           emang ikut bayar pajak
+## 575                 bayar pajak kendaraan di balai kota udah tutup trus diarahin ke samsat cabang galeria mall malah muter mall dlu 
+## 576              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 577                                        hai kak jika efin hilang melaui twitter  kakak dapat mengajukan permohonan lupa efin   s 
+## 578           kalau mr a nya ada di ln  di tagihkan nya ke perusahaan mr a bekerja di ln apakah ini tdk bs dianggap penggantian uang
+## 579                                                               apresiasi para taat pajak walikota dumai undi hadiah gebyar pbb p 
+## 580                                 anda pun siapa kalah pilkada yang mana itu bro kacau otak anda yang pasti pajakku dipotong buat 
+## 581                                                               ditjen pajak optimistis penerimaan pajak  capai target rp triliun 
+## 582                  hai kak  baik kak samasama apabila ada pertanyaan lain tentang perpajakan silakan hubungi kami kembali  tkstyah
+## 583                            apabila tidak diinvestasikan maka penghasilan dividen tsb dikenakan pajak di spt tahunan menggunakan 
+## 584                                      penjelasan lebih lanjut ttg investasi tsb diatur pada pmkpmk kriteria bentuk investasi gt  
+## 585                            dalam pasal  ayat  uu pph stdd uu hpp yg menjadi objek pajak adalah penghasilan termasuk selisih kur 
+## 586                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 587                          dividen sesuai dengan penjelasan diatas dapat dikecualikan dari objek pph dengan syarat harus diinvest 
+## 588            terima kasih atas kepercayaan kawanpajak kepada djp  djp terus meningkatkan kualitas layanan kepada kawanpajak agar s
+## 589                                    hai kak apakah yg kakak maksud disini memakai final adalah badan umkm sesuai pp  tahun  jika 
+## 590                           adividen yg dibagikan berasal dr badan usaha di luar negeri yg sahamnya diperdagangkan dibursa efek y 
+## 591                                                                                                   terima kasih atas informasinya
+## 592                          dividen yang berasal dari luar negeri yang diterima atau diperoleh wajib pajak dalam negeri dapat dike 
+## 593                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 594                                sesuai dengan pasal  ayat  huruf g uu pph stdtd uu hpp dividen merupakan objek pajak pph namun a 
+## 595                                     dijual cepat  datsun go panca   pajak hidup   kaleng   km  on going  ac menggigil  velg ring
+## 596                             selamat sore kak demi ketepatan informasi yang akan kami berikan boleh diinformasikan terlebih dahu 
+## 597                                                 syaratsyarat pengukuhan pkp badan dapat kakak baca pada laman berikut    tkstyah
+## 598                                  hai kak apabila pengusaha melakukan penyerahan bkpjkp termasuk penyerahan yg dibebaskan ppn da 
+## 599                              untuk itu silakan pastikan kembali pilihan dokumennya apakah sudah sesuai atau belum  jika pembeli 
+## 600                                        hai kak  terkait kode error etaxapi bukan merupakan dokumen penyerahan bkp atau jkp peny 
+## 601          asarakyatdibungkam earthquake  justru yg jadi beban rakyat dan negara  adalah hidup serta kehidupan para ndara tuwan pe
+## 602                                utang e tambahsing dibebani sopo yo rakyat mosok pejabat pajak kabeh naik  sejahtera ndogmu  pak 
+## 603                                                                       hai kak  terima kasih kembali senang bisa membantu tksilla
+## 604                              hai kak  mohon maaf atas ketidaknyamanannya apakah ada kodenotifikasi error yang muncul bisa disam 
+## 605                                                                                                              ok terima kasih kak
+## 606                                                                       hai kak  terima kasih kembali senang bisa membantu tksilla
+## 607                           hai kak mohon maaf atas ketidaknyamanannya  terkait kendala tsb sudah disampaikan ke pihak terkait un 
+## 608                                                                       hai kak  terima kasih kembali senang bisa membantu tksilla
+## 609                                                                       hai kak  terima kasih kembali senang bisa membantu tksilla
+## 610                                     hai kak jika efin hilang melaui twitter  kakak dapat mengajukan permohonan lupa efin silaka 
+## 611                                                berikut untuk ketentuan lengkap terkait pengukuhan pkp badan   berikut penjelasa 
+## 612                           hai kak secara peraturan tidak ada yang menyebutkan jeda waktu untuk aktivasi efin dan pengukuhan pkp 
+## 613                              hai kak  mohon maaf atas ketidaknyamanannya  mohon kesediaannya untuk dicoba secara berkala terleb 
+## 614                               hai kak baik samasama senang bisa membantu apabila ada pertanyaan lain tentang perpajakan silakan 
+## 615                                                apa ini call centernya pada gabisa semua  gimana nih  mau bayar pajak aja susah  
+## 616                             hai kak apabila kakak belum pernah aktivasi efin silakan ikuti petunjuk di video pada tautan beriku 
+## 617                                                                                                             oke terima kasih min
+## 618                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 619                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 620           kode dan nsfp tersebut terdiri atas enam belas digit dua digit pertama adalah kode transaksi dan satu digit berikutnya
+## 621                                                                                                                     pajak jualan
+## 622                                   yg dimaksud dg perjanjian meliputi jual beli tukarmenukar jual beli dg angsuran  perjanjian l 
+## 623                          jika biaya listrik tersebut masuk dalam definisi biaya layanan maka masuk juga sebagai dasar pengenaan 
+## 624                  kode transaksi faktur pajak terdiri dari sembilan jenis angka  yang masingmasing penggunaannya berbeda   penggu
+## 625                                          coba login di komputer laptop lain kak aku juga dari tadi pagi sampe jam segini baru s 
+## 626                                                   kalau bisa usulkan lagi pajak kendaraannya lebih terjangkau alias murah banget
+## 627                                          coba login di komputer laptop lain kak aku juga dari tadi pagi sampe jam segini baru s 
+## 628                                hai kak berdasarkan uu ppn stdd uu hpp pasal a yg termasuk dalam pengertian penyerahan bkp adala 
+## 629                     promo akhir tahun   spesial deal diskon   bebas pajakpajak  bebas biaya kpr  free biaya shm bbn amp  ajb  f 
+## 630                          yang dimaksud dengan biaya layanan atau service charge adalah balas jasa yang menyebabkan ruangan yang 
+## 631                              jika reject maka silakan hapus fp yg reject tsb kemudian silakan coba rekam kembali pastikan isian 
+## 632                            selain itu silakan dicoba langkah berikut   pastikan internet stabil   clear cache amp  cookies pada 
+## 633          saat berdialog saya jelaskan tentang mengapa kita harus kembali ke sistem asli indonesia sebab salah satunya penerimaan
+## 634               coba login di komputer laptop lain kak aku juga dari tadi pagi sampe jam segini baru selesai lapor dicoba dulu kak
+## 635            nanti sore insyaallah akan saya share berapa kilo ton npi yg sudah dikirim ke china sejak january    biar kita bisa s
+## 636                           dengan nama dan dalam bentuk apapun yang berkaitan dengan tanah danatau bangunan yang disewa termasuk 
+## 637                            terkait pengaruh jika mengupload faktur sebelum mengaktifkan uploader faktur nantinya faktur tersebu 
+## 638                                            coba login di komputer laptop lain kak aku juga dari tadi pagi sampe jam segini baru 
+## 639                                 hai kak pph final  atas persewaan tanah danatau bangunan dikenakan atas jumlah bruto nilai pers 
+## 640                              hai kak  sampai saat ini belum ada informasi resmi terkait error pada web efaktur namun beberapa w 
+## 641                             hai kak  mohon maaf atas ketidaknyamanannya sampai saat ini belum ada informasi resmi terkait error 
+## 642                                        coba login di komputer laptop lain kak aku juga dari tadi pagi sampe jam segini baru sel 
+## 643                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 644                jadiii buat kalian mahasiswa ut atau dimana pun kalian bisa kok nanyananyaa tentang materi pajakakuntansi ke kit 
+## 645                                         coba login di komputer laptop lain kak aku juga dari tadi pagi sampe jam segini baru se 
+## 646                         karena pengusaha asing non pribumi habis jd sasaran pajak pungli dan tidak di fasilitasi apa bandingkan 
+## 647             anggota satlantas polres kudus melaksanakan giat pelayanan samsat keliling dalam rangka memberikan kemudahan terhad 
+## 648                                                            min mau tanya apa kan ini bisa di hapus soalnya saya ada salah input 
+## 649                                                                  pemkab sinjai fokus rampungkan materi ranperda pajak retribusi 
+## 650                                                                                                          mjb beli kbln blm pajak
+## 651                                                                     ada revisi harga jual barang min jadi merubah dpp dan ppnnya
+## 652                                    login di komputer atau laptop lain kak aku dari bali juga gitu dari tadi pagi nunggu baru le 
+## 653                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 654                                                                                       perubahan no npwp jd no nik plg lambat kpn
+## 655                                                                   tapi elo gak ikut milih gubernurgak ada hak politik elo disit 
+## 656                          hallo admin aku mau input faktur keluaran ada tiga tgl yaitu tgl pembayaran dari billing pajak uang mu 
+## 657                             coba untuk matikan antivirus danatau firewall sebelum membuka aplikasi efaktur kembali  silakan dic 
+## 658                              betulkak  jadi ini perush dalam grup yang sama  misal di grup asto  semisal antara jan  maret  dia 
+## 659                               pastikan sertifikat elektronik masih berlaku coba upload ulang sertel di aplikasinya   apabila ko 
+## 660                              hai kak  terkait kendala tersebut silakan coba langkah berikut  cek koneksi internet pastikan pc t 
+## 661                                                 fiii udah maen politik yaa  bae bae kena pajak   tetep aja lo dikandangin rezim 
+## 662                            sehingga apabila tidak termasuk dalam pasal tsb maka atas penyerahaan tsb dikenakan ppn sesuai keten 
+## 663                                     dijual cepat  datsun go panca   pajak hidup   kaleng   km  on going  ac menggigil  velg ring
+## 664                          gue admin sistem ngerjain  bikin po ke supplier input barang dateng input po dari customer bikin surat 
+## 665                               hai kak terkait hal tersebut memang harus dapat diklasifikasikan karena barang yang mendapatkan f 
+## 666              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 667              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 668                            hai kak bisa diinformasikan lebih detail terkait transaksi yang dilakukan kegiatan usaha tersebut di 
+## 669                         satlantas bersama instansi terkait beri edukasi taat pajak dan tertib berlalu lintas di smkn  karawang  
+## 670                                                             harusnya begini bener kenakan pajak bahan mentah se tinggi tingginya
+## 671                          sepanjang fp tersebut merupakan fp yg dapat di kreditkan sesuai dengan ketentuan maka fp penggati teta 
+## 672                           dalam hal pembeli telah melakukan pengkreditan pm atas ppn pada faktur pajak yang diganti tersebut ma 
+## 673                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 674                               hai kak  dapat diinformasikan revisi tersebut terkait apa kak secara umum faktur pajakfp penggant 
+## 675                                                                                                        sudah bisa nich thank you
+## 676                                min utk fp  kawasan bebas no ppbj sudah diinput tanpa  angka depan no ppbj tgl fp jg sudah sesua 
+## 677                                                           bisa cari dimana untuk skema format excel  dokumen lain pajak keluaran
+## 678                                                                                         hai kak  ada yang bisa dibantu   tksbudi
+## 679                                                                                            jt rupiah buat ka tam dipotong pajak 
+## 680                                                                                                                       ohh pajak 
+## 681                           jangan takut lawan terus indonesia berhak maju nikel punya indonesia kok negara lain yang ngatur aneh 
+## 682                               apabila masih terkendala silakan mencoba langkah berikut  clear cache amp  cookies pada browser   
+## 683                                                 daftar nomor telepon dan email kpp dapat dilihat di laman  atau untuk lupa efin 
+## 684                                 hai kak mohon maaf atas ketidaknyamanannya silakan kakak coba centang pilihan dekstop site pada 
+## 685                             hai kak  apakah sebelumnya kakak sudah pernah aktivasi efin jika belum silakan aktivasi terlebih da 
+## 686                                                                                    tinggal naikkan pajak ekspogitu aja kok repot
+## 687                                                                                              baik terima kasih pak yadiii mantap
+## 688             jasa raharja akan terus menudukung upt samsat  dalam setiap kegiatan yang dapat meningkatkan penerimaan pajak kenda 
+## 689                              pastikan sertel masih berlaku coba download amp  pasang kembali sertel pada browser   gunakan brow 
+## 690                             saya input ssp ppn kms di b saat di save muncul ini min utk ppn kms harus diinput dulu ke b kemudia 
+## 691                         hai kak saat ini untuk nilai kompensasi dari masa pajak sebelumnya pada web efaktur akan muncul otomati 
+## 692                              hai kak mohon maaf atas ketidaknyamanannya terkait kendala tersebut silakan dicoba langkah berikut 
+## 693                      hai kak benar kak silakan dapat dimasukkan pada kolom ppn disetor dimuka pada masa pajak yang sama  tksyadi
+## 694                                                                                            pajak mobil makin hari makin hhhh ces
+## 695                     kegiatan ini juga didampingi jajaran satlantas polres barru   jasa raharja bersama upt samsat barru akan te 
+## 696               berlokasi di jalan poros barruparepare jasa raharja dan upt samsat barru gencar mengadakan kegiatan penertiban pa 
+## 697              benerbener edan   sejak  indonesia sudah x eksport npi ke china dan itu pajak eksportnya sepeserpun tak masuk kas n
+## 698                                   implementasi uu hpp jadi salah satu pendorong kinerja positif pajak    berita selengkapnya di 
+## 699                             subsidi motor listrik gk ada yg salah kok drpd duitnya buat subsidi bbm toh jauh lebih besar subsid 
+## 700                        apabila tidak terdapat kesalahan maka tidak perlu di ubah ya kak silakan dibuat sesuai dengan keadaan ya 
+## 701                                     dijual cepat  datsun go panca   pajak hidup   kaleng   km  on going  ac menggigil  velg ring
+## 702                           hai kak pihak yang membuat faktur pajak sebagai pelaksanaan pemungutan ppn terutang adalah pihak yang 
+## 703                                                                                                   a wp pribadi b sudah  lupaefin
+## 704          pajak padahal ga terlalu suka tp gatau knp ambil pajak saranku pilih yg prospek pekerjaannya baguss  yg paling dikuasai
+## 705                              taxmin mau tanya kalau wp badan dalam negeri tagih invoice dengan usd kepada wpbadan dlm negeri jg 
+## 706                             kemarin pas sy download gaada notif apaapastuck aja trus td sy cek trnyt yg bpe tersimpan tp yg spt 
+## 707                    selamat dapet sejuta karena benar tapi potong pajak jadi ambil hikmahnya aja  heh  semoga momijimu wangy juga
+## 708                          hai kak berdasarkan surat edaran se dirjen pajak untuk pembulatan nilai ppn jika terdapat angka dibela 
+## 709                          hai kak apabila yang kakak maksud adalah permintaan kembali surat pengukuhan pengusaha kena pajak sppk 
+## 710                                selamat siang saya mau bertanya mengenai pemotongan pph  jika kita melakukan pemotongan pph  ber 
+## 711                                 sore min  batas waktu pengajuan skb pemotongan pph  untuk perusahaan yang berdiri tahun ini itu 
+## 712                           tagihan listrik itu terkait sewa menyewa di mall tersebut dengan pengelola badan kak utk tagihan sewa 
+## 713                          hai kak apabila disini yang menerima reimburse adalah perusahaan dalam negeri maka bukan merupakan obj 
+## 714                         sudah min makasih  td kesulitan menyamakan nama di djp dengan data disduk  sudah dibantu org disdukcapil
+## 715                                                                                                   bisa minta efin npwp saya pak 
+## 716             omzet lebih dari  juta dalam setahun bayar pajak  bagi umkm yang omzetnya telah melampaui juta dalam satu tahun maka
+## 717                                           hai kak  mohon maaf atas ketidaknyamanannya untuk kendala yang kakak alami sudah taxm 
+## 718                 cm hallo kakak kakak diantara peminatan konsentrasi jurusan akuntansi  ada pilihannya audit pajak sama sistem i 
+## 719           kode dan nsfp tersebut terdiri atas enam belas digit dua digit pertama adalah kode transaksi dan satu digit berikutnya
+## 720                                                                                           iya terimakasih kaka atas perhatiannya
+## 721                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 722                                selamat pagi temankeu   mulai hari rabu dengan cek infokeu kurs pajak terbaru yuk   selengkapnya 
+## 723                                                         dijual mobil suzuki xover  bandung pajak  asuransi oktober  jt hub   be 
+## 724                camat deli tua muhammad taufan sstp msi meninjau pembukaan loket dan pembayaran pajak bumi dan bangunan pbb di k 
+## 725            tax update    hai sobat  berikut merupakan informasi update kurs pajak yang berlaku dari  november  hingga  desember 
+## 726                                                                                          maaf pak berita ini maksudnya apa yah  
+## 727                         halo min  beberapa hari lalu kami mengirimkan surat ke ditjen peraturan perpajakan ii mengenai perminta 
+## 728                               hai kak  silakan jelaskan lebih detail kendala yang kakak alami hal ini terjadi ketika mengklik m 
+## 729                                                     apabila kakak memiliki informasi terkait tindak pidana di bidang perpajakan 
+## 730                      hi min kalau mau tau info barang perdagangan yang kena pajak dan tidak kena pajak itu darimana ya sumbernya
+## 731                                                      hai kak  terima kasih atas atensi yang diberikan terkait pengawasan perpaj 
+## 732                                    dana negara  rakyat masa sih luput lpjnya semua yg terkait  hrs bertanggung jawab secara pro 
+## 733                               hai kak silakan kak apa yang bisa taxmin bantu apakah mengalami kendala jika iya silakan jelaskan 
+## 734                                                                                                            pajak nya telat dari 
+## 735                              untuk perubahan data pengurus belum dapat diajukan secara online ya kak silakan ajukan secara tert 
+## 736                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 737                                   pajak penerangan jalan kita bayar tiap bulan kalo sistem token tiap transaksi bukan tiap tahun
+## 738                                                             buang uang negararakyat bayar pajak dg segala mahalkalian buang uang
+## 739              kode dan nsfp tersebut terdiri atas enam belas digit dua digit pertama adalah kode transaksi dan satu digit beriku 
+## 740              yuk kenali jenis dan saat penggunaan kode transaksi faktur pajak  kode transaksi merupakan bagian yang harus ada d 
+## 741                               pastikan sertifikat elektronik masih berlaku silakan unduh file sertifikat baru dan pasang pada a 
+## 742                          karena penyerahan jasanya ada di dalam daerah pabean maka dianggap penyerahan dalam negeri sehingga pt 
+## 743                               perubahan data pengurus dapat diajukan secara langsung tertulis ke kpp terdaftar atau mengirimkan 
+## 744                              hai kak  apakah maksud kakak terkait perhitungan pph pasal   apakah perusahaan baru adalah bukan b 
+## 745                                            madya jaksel sudah kooperatif membantu dari tgl  dan fast respon namun memang dikemb 
+## 746                                                 min web efaktur gabisa cetak spt mau dicetak untuk lampiran pelaporan gimana min
+## 747                               hai kak mohon maaf atas ketidaknyamanannya  saat ini belum ada informasi resmi terkait error pada 
+## 748                                       jkp yang diserahkan tidak termasuk ke dalam jkp tertentu yang diatur di pmkpmk sehingga t 
+## 749                                            hai kak  sesuai dengan pasal  perpj dalam hal data danatau informasi yg terdapat dal 
+## 750                                                                   wkwkkwkwk sadis kaleee entar kena denda pajak kaing nih banser
+## 751                                                                  ooh ada dendanya gitu kukira kalo dah mati gak usah bayar pajak
+## 752                              hai kak jika pt abc menyerahkan jasa pengurusan visa ke mr a maka atas penyerahan tsb terutang ppn 
+## 753           apa ini bentuk uu suversif gaya baru dalam kemasan rkuhp kalau   ngakunya anti orba tapi lawan politik mau terus merek
+## 754                             hai kak  apabila sebelumnya kakak blm pernah mengajukan permohonan aktivasi efin silakan ajukan per 
+## 755                                                 selain itu silakan dicoba langkah berikut  pastikan internet stabil  clear cach 
+## 756                                              hai kak mohon maaf atas ketidaknyamanannya sampai saat ini belum ada informasi res 
+## 757                              terkait keterangan dalam fp dan ketentuan pengisian keterangan dalam fp silakan sesuaikan dengan k 
+## 758                         formulir permintaan kembali tersebut harus dilengkapi dokumen yg sama dengan yang disyaratkan sebagai k 
+## 759          saat berdialog saya jelaskan tentang mengapa kita harus kembali ke sistem asli indonesia sebab salah satunya penerimaan
+## 760                             permintaan tersebut dapat diajukan secara langsung atau melalui posjasa ekspedisijasa kurir  formul 
+## 761                                                                  ucing kantor pajak  soleh    syeyengsyeyeng    lele    siging  
+## 762                                 hai kak  djp tidak mengatur terkait pembuatan invoice atas transaksi wajib pajak  ketentuan per 
+## 763                            jika kartu npwp rusak hilang atau alasan lain wajib pajak dapat mengajukan permintaan kembali kartu  
+## 764                           kartu npwp elektronik dpt diperoleh dgn masuk ke aplikasi djp online pada bagian informasi setelah me 
+## 765          saat berdialog saya jelaskan tentang mengapa kita harus kembali ke sistem asli indonesia sebab salah satunya penerimaan
+## 766                             hai kak sampai saat ini belum ada proses permohonan permintaan kembalicetak ulang npwp digitalelekt 
+## 767                               hal ini terjadi ketika mengklik menutombol apa apa keterangan atau tampilan yang muncul   tksrtra 
+## 768                                                                                                         pd web kak mau lapor ini
+## 769                              hai kak untuk kondisi tanggal bayar tersebut maka seharusnya tetap dapat dilaporkan pembayaran ssp 
+## 770                              hai kak  mohon maaf atas ketidaknyamanannya  mohon kesediaannya untuk dicoba secara berkala terleb 
+## 771          saat berdialog saya jelaskan tentang mengapa kita harus kembali ke sistem asli indonesia sebab salah satunya penerimaan
+## 772                                yg jelas jakarta bakal tenggelamwallahualam bishowab  kita bnyk muhasabah diriintropeksi dirimawa
+## 773                                                  ayo download dan klik link referal  untuk dapatkan  mcflurry harga special rp  
+## 774                                                anda benaar selamat mendapatkan satu juta rupiah seluruhnya dipotong pajak wkwkwk
+## 775                     toyota corolla ke baru restorasi kerok total surat komplit pajak baru bulan juli kemarin ac dingin mesin gak
+## 776                               hai kak mohon maaf atas kendalanya spt yang tidak bisa di cetak berupa spt apa ya kak pada aplika 
+## 777                            selain itu silakan dicoba langkah berikut   pastikan internet stabil   clear cache amp  cookies pada 
+## 778                                                hallo admin  saya ingin mengajukan kembali efin soalnya efin lama hilang lupaefin
+## 779                             hai kak mohon maaf atas ketidaknyamanannya sampai saat ini tidak ada informasi resmi terkait error  
+## 780                                                                                                           iya td refresh jg bisa
+## 781                                                                                                                        pajak coy
+## 782                                                                                 ᅠ ᅠ pajak kendaraan atau pajak rumah aja gimana  ᅠ ᅠ
+## 783                                       untuk tindak lanjut terkait proses tersebut silakan dikonfirmasi ke kpp ya kak kontak dan 
+## 784                                      apabila sudah dipastikan pengisian spt benar lalu dilakukan posting ulang dan nilai kompen 
+## 785                                         hai kak  mohon maaf atas ketidaknyamanannya secara umum atas nominal lb yg diakui untuk 
+## 786                        selain itu silakan dicoba langkah berikut   pastikan internet stabil   clear cache amp  cookies pada bro 
+## 787                                                                                        mana woyy ga pajak ultah leyot buat pipih
+## 788                               hai kak untuk pengecekan status npwp silakan dapat menghubungi kringpajak  atau melalui live chat 
+## 789                         hai kak mohon maaf atas ketidaknyamanannya sampai saat ini tidak ada informasi resmi terkait error pada 
+## 790                                                                       kak efinnya sudah dpt dpt dari admin cs email  terimakasih
+## 791                              hai kak  mohon maaf atas ketidaknyamanannya untuk kendala download cetak spt tersebut apakah terda 
+## 792                                   hai kak betul jika memang ada fp yg belum diakui pasti akan muncul di prepopulated jika tidak 
+## 793                                                                                                          cc org pajak tan hahaha
+## 794                                                                           bner ini  pajak mati ga punya sim aman asal motor rapi
+## 795                                                              format dan tata cara penggunaan kode nomor seri faktur pajak  utas 
+## 796                                           hai kak silakan follow akun  terlebih dahulu agar taxmin dapat mengirimkan validasi d 
+## 797                              hai kak  terima kasih atas masukan dan sarannya ya kak  masukan dan saran tsb sangat berarti untuk 
+## 798                            hi kak kita dari hipajak mau bantu jawab nih untuk permohonan wpne bisa diajukan secara online via w 
+## 799                                                    mjb kak deskripsi faktur pajak yg di bikin ada tanda  kah soalnya kalo ada t 
+## 800                           jika badan memakai final lalu di laporan ada tambahan laba selisih kursnya apakah tetap akan dihitung
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{(dataframe,}\AttributeTok{file =} \StringTok{\textquotesingle{}dataPreprocessing.csv\textquotesingle{}}\NormalTok{)}
+\FunctionTok{View}\NormalTok{(dataframe)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{d}\OtherTok{\textless{}{-}}\FunctionTok{read.csv}\NormalTok{(}\StringTok{"dataPreprocessing.csv"}\NormalTok{,}\AttributeTok{stringsAsFactors =} \ConstantTok{FALSE}\NormalTok{) }
+\CommentTok{\#merubah text menjadi char }
+\NormalTok{review }\OtherTok{\textless{}{-}}\FunctionTok{as.character}\NormalTok{(d}\SpecialCharTok{$}\NormalTok{text) }
+
+\NormalTok{s }\OtherTok{\textless{}{-}} \FunctionTok{get\_nrc\_sentiment}\NormalTok{(review, }\AttributeTok{cl =} \ConstantTok{NULL}\NormalTok{, }\AttributeTok{language =} \StringTok{"english"}\NormalTok{, }\AttributeTok{lowercase =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: `spread_()` was deprecated in tidyr 1.2.0.
+## i Please use `spread()` instead.
+## i The deprecated feature was likely used in the syuzhet package.
+##   Please report the issue to the authors.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#klasifikasi data}
+\NormalTok{review\_combine}\OtherTok{\textless{}{-}}\FunctionTok{cbind}\NormalTok{(d}\SpecialCharTok{$}\NormalTok{text,s)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar=}\FunctionTok{rep}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{))}
+\NormalTok{a}\OtherTok{\textless{}{-}} \FunctionTok{barplot}\NormalTok{(}\FunctionTok{colSums}\NormalTok{(s),}\AttributeTok{col=}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}grey\textquotesingle{}}\NormalTok{), }\AttributeTok{xlab =}\StringTok{\textquotesingle{}emotion\textquotesingle{}}\NormalTok{, }\AttributeTok{ylab=}\StringTok{\textquotesingle{}count\textquotesingle{}}\NormalTok{,}\AttributeTok{main=}\StringTok{\textquotesingle{}Sentiment Analysis\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{projectAkhir_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{barplt }\OtherTok{\textless{}{-}}\NormalTok{ a}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{require}\NormalTok{ (corpus)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: corpus
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
+## logical.return = TRUE, : there is no package called 'corpus'
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df}\OtherTok{\textless{}{-}}\FunctionTok{read.csv}\NormalTok{(}\StringTok{"dataPreProcessing.csv"}\NormalTok{,}\AttributeTok{stringsAsFactors =} \ConstantTok{FALSE}\NormalTok{)}
+\FunctionTok{glimpse}\NormalTok{(df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 800
+## Columns: 2
+## $ X    <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19~
+## $ text <chr> "   qt paling cerdas ", "halo kak  saya lupa no efin saya", " jok~
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{20}\NormalTok{)}
+\NormalTok{df}\OtherTok{\textless{}{-}}\NormalTok{df[}\FunctionTok{sample}\NormalTok{(}\FunctionTok{nrow}\NormalTok{(df)),]}
+\NormalTok{df}\OtherTok{\textless{}{-}}\NormalTok{df[}\FunctionTok{sample}\NormalTok{(}\FunctionTok{nrow}\NormalTok{(df)),]}
+\FunctionTok{glimpse}\NormalTok{(df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 800
+## Columns: 2
+## $ X    <int> 225, 126, 563, 486, 263, 296, 689, 185, 324, 199, 219, 241, 119, ~
+## $ text <chr> "progam inklusi kesadaran pajakdengan memasukkan materi pajak dal~
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{corpus}\OtherTok{\textless{}{-}}\FunctionTok{Corpus}\NormalTok{(}\FunctionTok{VectorSource}\NormalTok{(df}\SpecialCharTok{$}\NormalTok{text))}
+\NormalTok{corpus}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <<SimpleCorpus>>
+## Metadata:  corpus specific: 1, document level (indexed): 0
+## Content:  documents: 800
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{inspect}\NormalTok{(corpus[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <<SimpleCorpus>>
+## Metadata:  corpus specific: 1, document level (indexed): 0
+## Content:  documents: 10
+## 
+##  [1] progam inklusi kesadaran pajakdengan memasukkan materi pajak dalam rpsjuga menjadi salah satu tujuan kerja sama yang dibahas
+##  [2]      pgn gw lemparin pake batu ktr dinas pndidikan da                                                                       
+##  [3]  hai kak pertanyaan kakak sudah terjawab pada tautan berikut ya kak   jika ada                                              
+##  [4]  hahahaha duit pajak gw dibuangbuang bwt beli power bank dikasih roda                                                       
+##  [5]  polri sat lantas jakbar amp  dishub melaksanakan pengalihan arus  lalu lintas imbas proyek galian penampungan a            
+##  [6]  kinerja perpajakan dalam apbnkita menunjukkan hasil positif  hingga  oktober  penerimaan perpajakan indonesia t            
+##  [7]   pastikan sertel masih berlaku coba download amp  pasang kembali sertel pada browser   gunakan brow                        
+##  [8]    hahaha otakmua nggak nyampe harga  di shanghai itu ore kan trus di indonesia dijual                                      
+##  [9]  hai kak pemungut pph pasal  adalah badan usaha yang melakukan penjualan emas batangan di dalam negeri                      
+## [10]  yaallahh aku ming jaluk pajak jadian dikiro ngecroh
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#fungsinya untuk membersihkan data data yang tidak dibutuhkan }
+\NormalTok{corpus.clean}\OtherTok{\textless{}{-}}\NormalTok{corpus}\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{tm\_map}\NormalTok{(}\FunctionTok{content\_transformer}\NormalTok{(tolower))}\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{tm\_map}\NormalTok{(removePunctuation)}\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{tm\_map}\NormalTok{(removeNumbers)}\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{tm\_map}\NormalTok{(removeWords, }\FunctionTok{c}\NormalTok{(}\StringTok{"work"}\NormalTok{, }\StringTok{"from"}\NormalTok{, }\StringTok{"home"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{tm\_map}\NormalTok{(removeWords,}\FunctionTok{stopwords}\NormalTok{(}\AttributeTok{kind=}\StringTok{"en"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{tm\_map}\NormalTok{(stripWhitespace)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(., content_transformer(tolower)): transformation
+## drops documents
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(., removePunctuation): transformation drops
+## documents
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(., removeNumbers): transformation drops documents
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(., removeWords, c("work", "from", "home")):
+## transformation drops documents
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(., removeWords, stopwords(kind = "en")):
+## transformation drops documents
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in tm_map.SimpleCorpus(., stripWhitespace): transformation drops
+## documents
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dtm}\OtherTok{\textless{}{-}}\FunctionTok{DocumentTermMatrix}\NormalTok{(corpus.clean)}
+
+\FunctionTok{inspect}\NormalTok{(dtm[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{,}\DecValTok{1}\SpecialCharTok{:}\DecValTok{20}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <<DocumentTermMatrix (documents: 10, terms: 20)>>
+## Non-/sparse entries: 25/175
+## Sparsity           : 88%
+## Maximal term length: 11
+## Weighting          : term frequency (tf)
+## Sample             :
+##     Terms
+## Docs dalam dibahas inklusi kerja kesadaran materi memasukkan menjadi pajak yang
+##   1      1       1       1     1         1      1          1       1     1    1
+##   10     0       0       0     0         0      0          0       0     1    0
+##   2      0       0       0     0         0      0          0       0     0    0
+##   3      0       0       0     0         0      0          0       0     0    0
+##   4      0       0       0     0         0      0          0       0     1    0
+##   5      0       0       0     0         0      0          0       0     0    0
+##   6      1       0       0     0         0      0          0       0     0    0
+##   7      0       0       0     0         0      0          0       0     0    0
+##   8      0       0       0     0         0      0          0       0     0    0
+##   9      1       0       0     0         0      0          0       0     0    1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df.train}\OtherTok{\textless{}{-}}\NormalTok{df[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{50}\NormalTok{,]}
+\NormalTok{df.test}\OtherTok{\textless{}{-}}\NormalTok{df[}\DecValTok{51}\SpecialCharTok{:}\DecValTok{100}\NormalTok{,]                                            }
+
+\NormalTok{dtm.train}\OtherTok{\textless{}{-}}\NormalTok{dtm[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{50}\NormalTok{,]}
+\NormalTok{dtm.test}\OtherTok{\textless{}{-}}\NormalTok{dtm[}\DecValTok{51}\SpecialCharTok{:}\DecValTok{100}\NormalTok{,]}
+
+\NormalTok{corpus.clean.train}\OtherTok{\textless{}{-}}\NormalTok{corpus.clean[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{50}\NormalTok{]}
+\NormalTok{corpus.clean.test}\OtherTok{\textless{}{-}}\NormalTok{corpus.clean[}\DecValTok{51}\SpecialCharTok{:}\DecValTok{100}\NormalTok{]}
+
+\FunctionTok{dim}\NormalTok{(dtm.train)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]   50 2447
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fivefreq}\OtherTok{\textless{}{-}}\FunctionTok{findFreqTerms}\NormalTok{(dtm.train,}\DecValTok{5}\NormalTok{)}
+\FunctionTok{length}\NormalTok{(fivefreq)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 22
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dtm.train.nb}\OtherTok{\textless{}{-}}\FunctionTok{DocumentTermMatrix}\NormalTok{(corpus.clean.train,}\AttributeTok{control =} \FunctionTok{list}\NormalTok{(}\AttributeTok{dictionary=}\NormalTok{fivefreq))}
+
+\CommentTok{\#dim(dtm.train.nb)}
+
+\NormalTok{dtm.test.nb}\OtherTok{\textless{}{-}}\FunctionTok{DocumentTermMatrix}\NormalTok{(corpus.clean.test,}\AttributeTok{control =} \FunctionTok{list}\NormalTok{(}\AttributeTok{dictionary=}\NormalTok{fivefreq))}
+
+\FunctionTok{dim}\NormalTok{(dtm.test.nb)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 50 22
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{convert\_count }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x)\{}
+\NormalTok{    y}\OtherTok{\textless{}{-}}\FunctionTok{ifelse}\NormalTok{(x}\SpecialCharTok{\textgreater{}}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{)}
+\NormalTok{    y}\OtherTok{\textless{}{-}}\FunctionTok{factor}\NormalTok{(y,}\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{),}\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"no"}\NormalTok{,}\StringTok{"yes"}\NormalTok{))}
+\NormalTok{    y}
+\NormalTok{\}}
+\NormalTok{trainNB}\OtherTok{\textless{}{-}}\FunctionTok{apply}\NormalTok{(dtm.train.nb,}\DecValTok{2}\NormalTok{,convert\_count)}
+\NormalTok{testNB}\OtherTok{\textless{}{-}}\FunctionTok{apply}\NormalTok{(dtm.test.nb,}\DecValTok{1}\NormalTok{,convert\_count)}
+
+\FunctionTok{wordcloud}\NormalTok{(corpus.clean,}\AttributeTok{min.freq =} \DecValTok{4}\NormalTok{,}\AttributeTok{max.words=}\DecValTok{100}\NormalTok{,}\AttributeTok{random.order=}\NormalTok{F,}\AttributeTok{colors=}\FunctionTok{brewer.pal}\NormalTok{(}\DecValTok{8}\NormalTok{,}\StringTok{"Dark2"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{projectAkhir_files/figure-latex/unnamed-chunk-6-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kalimat2}\OtherTok{\textless{}{-}}\FunctionTok{read.csv}\NormalTok{(}\StringTok{"dataPreProcessing.csv"}\NormalTok{,}\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{)}
+
+\CommentTok{\#skoring}
+\NormalTok{kata.positif }\OtherTok{\textless{}{-}} \FunctionTok{scan}\NormalTok{(}\StringTok{"positive{-}words.txt"}\NormalTok{,}\AttributeTok{what=}\StringTok{"character"}\NormalTok{,}\AttributeTok{comment.char=}\StringTok{";"}\NormalTok{)}
+\NormalTok{kata.negatif }\OtherTok{\textless{}{-}} \FunctionTok{scan}\NormalTok{(}\StringTok{"negative{-}words.txt"}\NormalTok{,}\AttributeTok{what=}\StringTok{"character"}\NormalTok{,}\AttributeTok{comment.char=}\StringTok{";"}\NormalTok{)}
+\NormalTok{score.sentiment }\OtherTok{=} \ControlFlowTok{function}\NormalTok{(kalimat2, kata.positif, kata.negatif,}
+                           \AttributeTok{.progress=}\StringTok{\textquotesingle{}none\textquotesingle{}}\NormalTok{)}
+\NormalTok{\{}
+  \FunctionTok{require}\NormalTok{(plyr)}
+  \FunctionTok{require}\NormalTok{(stringr)}
+\NormalTok{  scores }\OtherTok{=} \FunctionTok{laply}\NormalTok{(kalimat2, }\ControlFlowTok{function}\NormalTok{(kalimat, kata.positif,}
+\NormalTok{                                    kata.negatif) \{}
+\NormalTok{    kalimat }\OtherTok{=} \FunctionTok{gsub}\NormalTok{(}\StringTok{\textquotesingle{}[[:punct:]]\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{, kalimat)}
+\NormalTok{    kalimat }\OtherTok{=} \FunctionTok{gsub}\NormalTok{(}\StringTok{\textquotesingle{}[[:cntrl:]]\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{, kalimat)}
+\NormalTok{    kalimat }\OtherTok{=} \FunctionTok{gsub}\NormalTok{(}\StringTok{\textquotesingle{}}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{d+\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{, kalimat)}
+\NormalTok{    kalimat }\OtherTok{=} \FunctionTok{tolower}\NormalTok{(kalimat)}
+\NormalTok{    list.kata }\OtherTok{=} \FunctionTok{str\_split}\NormalTok{(kalimat, }\StringTok{\textquotesingle{}}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{s+\textquotesingle{}}\NormalTok{)}
+\NormalTok{    kata2 }\OtherTok{=} \FunctionTok{unlist}\NormalTok{(list.kata)}
+\NormalTok{    positif.matches }\OtherTok{=} \FunctionTok{match}\NormalTok{(kata2, kata.positif)}
+\NormalTok{    negatif.matches }\OtherTok{=} \FunctionTok{match}\NormalTok{(kata2, kata.negatif)}
+\NormalTok{    positif.matches }\OtherTok{=} \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(positif.matches)}
+\NormalTok{    negatif.matches }\OtherTok{=} \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(negatif.matches)}
+\NormalTok{    score }\OtherTok{=} \FunctionTok{sum}\NormalTok{(positif.matches) }\SpecialCharTok{{-}}\NormalTok{ (}\FunctionTok{sum}\NormalTok{(negatif.matches))}
+    \FunctionTok{return}\NormalTok{(score)}
+\NormalTok{  \}, kata.positif, kata.negatif, }\AttributeTok{.progress=}\NormalTok{.progress )}
+\NormalTok{  scores.df }\OtherTok{=} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{score=}\NormalTok{scores, }\AttributeTok{text=}\NormalTok{kalimat2)}
+  \FunctionTok{return}\NormalTok{(scores.df)\}}
+\NormalTok{hasil }\OtherTok{=} \FunctionTok{score.sentiment}\NormalTok{(kalimat2}\SpecialCharTok{$}\NormalTok{text, kata.positif, kata.negatif)}
+
+\CommentTok{\#mengubah nilai score menjadi sentimen}
+\NormalTok{hasil}\SpecialCharTok{$}\NormalTok{klasifikasi}\OtherTok{\textless{}{-}} \FunctionTok{ifelse}\NormalTok{(hasil}\SpecialCharTok{$}\NormalTok{score}\SpecialCharTok{\textless{}}\DecValTok{0}\NormalTok{, }\StringTok{"Negatif"}\NormalTok{,}\FunctionTok{ifelse}\NormalTok{(hasil}\SpecialCharTok{$}\NormalTok{score}\SpecialCharTok{==}\DecValTok{0}\NormalTok{,}\StringTok{"Netral"}\NormalTok{,}\StringTok{"Positif"}\NormalTok{))}
+\NormalTok{hasil}\SpecialCharTok{$}\NormalTok{klasifikasi}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   [1] "Positif" "Negatif" "Negatif" "Netral"  "Negatif" "Negatif" "Netral" 
+##   [8] "Negatif" "Negatif" "Netral"  "Netral"  "Negatif" "Positif" "Netral" 
+##  [15] "Negatif" "Negatif" "Netral"  "Negatif" "Negatif" "Positif" "Positif"
+##  [22] "Negatif" "Positif" "Netral"  "Positif" "Netral"  "Netral"  "Negatif"
+##  [29] "Netral"  "Positif" "Negatif" "Negatif" "Negatif" "Netral"  "Negatif"
+##  [36] "Negatif" "Netral"  "Negatif" "Negatif" "Netral"  "Negatif" "Positif"
+##  [43] "Netral"  "Negatif" "Netral"  "Netral"  "Netral"  "Positif" "Negatif"
+##  [50] "Netral"  "Negatif" "Negatif" "Negatif" "Negatif" "Negatif" "Netral" 
+##  [57] "Negatif" "Negatif" "Netral"  "Netral"  "Negatif" "Positif" "Negatif"
+##  [64] "Positif" "Netral"  "Positif" "Positif" "Netral"  "Positif" "Netral" 
+##  [71] "Positif" "Positif" "Netral"  "Negatif" "Netral"  "Netral"  "Negatif"
+##  [78] "Positif" "Negatif" "Negatif" "Positif" "Netral"  "Netral"  "Positif"
+##  [85] "Negatif" "Positif" "Netral"  "Positif" "Netral"  "Negatif" "Netral" 
+##  [92] "Negatif" "Negatif" "Netral"  "Negatif" "Netral"  "Netral"  "Positif"
+##  [99] "Netral"  "Negatif" "Negatif" "Negatif" "Negatif" "Netral"  "Netral" 
+## [106] "Netral"  "Positif" "Netral"  "Positif" "Netral"  "Positif" "Positif"
+## [113] "Positif" "Positif" "Negatif" "Negatif" "Netral"  "Negatif" "Negatif"
+## [120] "Negatif" "Negatif" "Netral"  "Negatif" "Netral"  "Negatif" "Netral" 
+## [127] "Negatif" "Negatif" "Negatif" "Netral"  "Negatif" "Positif" "Negatif"
+## [134] "Negatif" "Negatif" "Positif" "Negatif" "Netral"  "Netral"  "Netral" 
+## [141] "Negatif" "Netral"  "Negatif" "Netral"  "Netral"  "Negatif" "Positif"
+## [148] "Positif" "Netral"  "Netral"  "Netral"  "Positif" "Negatif" "Netral" 
+## [155] "Netral"  "Negatif" "Netral"  "Netral"  "Netral"  "Negatif" "Netral" 
+## [162] "Positif" "Netral"  "Negatif" "Netral"  "Negatif" "Negatif" "Netral" 
+## [169] "Negatif" "Negatif" "Negatif" "Negatif" "Positif" "Positif" "Netral" 
+## [176] "Netral"  "Negatif" "Negatif" "Negatif" "Negatif" "Negatif" "Negatif"
+## [183] "Negatif" "Negatif" "Netral"  "Negatif" "Netral"  "Positif" "Netral" 
+## [190] "Netral"  "Netral"  "Positif" "Netral"  "Negatif" "Netral"  "Negatif"
+## [197] "Netral"  "Netral"  "Netral"  "Netral"  "Netral"  "Netral"  "Netral" 
+## [204] "Negatif" "Negatif" "Netral"  "Negatif" "Positif" "Negatif" "Negatif"
+## [211] "Negatif" "Positif" "Positif" "Negatif" "Negatif" "Negatif" "Negatif"
+## [218] "Netral"  "Negatif" "Netral"  "Negatif" "Positif" "Negatif" "Netral" 
+## [225] "Negatif" "Negatif" "Negatif" "Negatif" "Negatif" "Negatif" "Positif"
+## [232] "Negatif" "Negatif" "Positif" "Netral"  "Netral"  "Negatif" "Negatif"
+## [239] "Netral"  "Netral"  "Negatif" "Positif" "Negatif" "Netral"  "Negatif"
+## [246] "Negatif" "Netral"  "Negatif" "Positif" "Netral"  "Positif" "Negatif"
+## [253] "Positif" "Netral"  "Netral"  "Negatif" "Netral"  "Negatif" "Netral" 
+## [260] "Netral"  "Negatif" "Negatif" "Netral"  "Netral"  "Positif" "Negatif"
+## [267] "Netral"  "Negatif" "Netral"  "Positif" "Positif" "Negatif" "Positif"
+## [274] "Negatif" "Negatif" "Negatif" "Netral"  "Netral"  "Negatif" "Negatif"
+## [281] "Netral"  "Negatif" "Negatif" "Netral"  "Positif" "Negatif" "Netral" 
+## [288] "Negatif" "Negatif" "Negatif" "Positif" "Negatif" "Negatif" "Negatif"
+## [295] "Positif" "Positif" "Positif" "Negatif" "Netral"  "Negatif" "Netral" 
+## [302] "Netral"  "Negatif" "Netral"  "Positif" "Negatif" "Netral"  "Positif"
+## [309] "Netral"  "Positif" "Positif" "Negatif" "Negatif" "Positif" "Netral" 
+## [316] "Negatif" "Negatif" "Negatif" "Netral"  "Negatif" "Negatif" "Positif"
+## [323] "Netral"  "Positif" "Negatif" "Negatif" "Positif" "Netral"  "Netral" 
+## [330] "Positif" "Positif" "Positif" "Netral"  "Positif" "Netral"  "Negatif"
+## [337] "Negatif" "Negatif" "Positif" "Negatif" "Negatif" "Negatif" "Netral" 
+## [344] "Positif" "Negatif" "Negatif" "Positif" "Negatif" "Netral"  "Negatif"
+## [351] "Netral"  "Negatif" "Netral"  "Negatif" "Negatif" "Positif" "Negatif"
+## [358] "Positif" "Negatif" "Positif" "Negatif" "Positif" "Negatif" "Positif"
+## [365] "Negatif" "Negatif" "Netral"  "Netral"  "Positif" "Netral"  "Negatif"
+## [372] "Positif" "Negatif" "Negatif" "Netral"  "Positif" "Negatif" "Positif"
+## [379] "Netral"  "Netral"  "Negatif" "Netral"  "Negatif" "Netral"  "Negatif"
+## [386] "Netral"  "Negatif" "Positif" "Negatif" "Positif" "Negatif" "Positif"
+## [393] "Negatif" "Netral"  "Netral"  "Positif" "Positif" "Negatif" "Positif"
+## [400] "Netral"  "Positif" "Negatif" "Positif" "Negatif" "Negatif" "Positif"
+## [407] "Positif" "Positif" "Negatif" "Netral"  "Netral"  "Positif" "Netral" 
+## [414] "Negatif" "Positif" "Negatif" "Negatif" "Netral"  "Positif" "Netral" 
+## [421] "Positif" "Positif" "Negatif" "Netral"  "Negatif" "Negatif" "Negatif"
+## [428] "Negatif" "Negatif" "Netral"  "Negatif" "Negatif" "Negatif" "Negatif"
+## [435] "Positif" "Netral"  "Negatif" "Positif" "Positif" "Positif" "Negatif"
+## [442] "Netral"  "Positif" "Netral"  "Negatif" "Negatif" "Netral"  "Netral" 
+## [449] "Negatif" "Positif" "Netral"  "Netral"  "Netral"  "Positif" "Netral" 
+## [456] "Positif" "Negatif" "Netral"  "Positif" "Negatif" "Positif" "Positif"
+## [463] "Negatif" "Netral"  "Netral"  "Netral"  "Positif" "Negatif" "Netral" 
+## [470] "Negatif" "Netral"  "Positif" "Netral"  "Netral"  "Netral"  "Negatif"
+## [477] "Netral"  "Negatif" "Negatif" "Netral"  "Positif" "Netral"  "Positif"
+## [484] "Netral"  "Positif" "Negatif" "Negatif" "Positif" "Netral"  "Negatif"
+## [491] "Negatif" "Positif" "Netral"  "Netral"  "Negatif" "Negatif" "Positif"
+## [498] "Negatif" "Positif" "Positif" "Netral"  "Positif" "Netral"  "Netral" 
+## [505] "Positif" "Negatif" "Negatif" "Netral"  "Netral"  "Negatif" "Netral" 
+## [512] "Negatif" "Positif" "Positif" "Netral"  "Negatif" "Netral"  "Positif"
+## [519] "Negatif" "Negatif" "Positif" "Positif" "Negatif" "Negatif" "Positif"
+## [526] "Positif" "Negatif" "Netral"  "Netral"  "Negatif" "Netral"  "Netral" 
+## [533] "Netral"  "Positif" "Netral"  "Netral"  "Negatif" "Netral"  "Positif"
+## [540] "Negatif" "Netral"  "Positif" "Negatif" "Netral"  "Netral"  "Netral" 
+## [547] "Netral"  "Negatif" "Negatif" "Negatif" "Positif" "Netral"  "Positif"
+## [554] "Positif" "Negatif" "Netral"  "Negatif" "Negatif" "Netral"  "Positif"
+## [561] "Negatif" "Netral"  "Negatif" "Netral"  "Positif" "Netral"  "Netral" 
+## [568] "Negatif" "Netral"  "Netral"  "Netral"  "Negatif" "Positif" "Negatif"
+## [575] "Positif" "Negatif" "Negatif" "Positif" "Positif" "Negatif" "Netral" 
+## [582] "Positif" "Negatif" "Netral"  "Negatif" "Positif" "Positif" "Positif"
+## [589] "Negatif" "Netral"  "Positif" "Positif" "Negatif" "Netral"  "Positif"
+## [596] "Netral"  "Positif" "Positif" "Positif" "Negatif" "Negatif" "Netral" 
+## [603] "Positif" "Positif" "Positif" "Positif" "Positif" "Positif" "Positif"
+## [610] "Negatif" "Positif" "Negatif" "Positif" "Positif" "Netral"  "Netral" 
+## [617] "Positif" "Positif" "Negatif" "Negatif" "Negatif" "Positif" "Negatif"
+## [624] "Negatif" "Positif" "Positif" "Positif" "Netral"  "Positif" "Netral" 
+## [631] "Positif" "Positif" "Positif" "Netral"  "Positif" "Negatif" "Negatif"
+## [638] "Positif" "Negatif" "Negatif" "Negatif" "Positif" "Negatif" "Positif"
+## [645] "Positif" "Negatif" "Positif" "Negatif" "Netral"  "Netral"  "Negatif"
+## [652] "Positif" "Negatif" "Negatif" "Negatif" "Positif" "Netral"  "Negatif"
+## [659] "Negatif" "Positif" "Netral"  "Netral"  "Positif" "Positif" "Negatif"
+## [666] "Negatif" "Negatif" "Netral"  "Positif" "Negatif" "Positif" "Positif"
+## [673] "Positif" "Positif" "Netral"  "Positif" "Negatif" "Netral"  "Netral" 
+## [680] "Netral"  "Netral"  "Positif" "Negatif" "Positif" "Negatif" "Netral" 
+## [687] "Positif" "Positif" "Positif" "Positif" "Positif" "Positif" "Positif"
+## [694] "Negatif" "Netral"  "Negatif" "Negatif" "Netral"  "Netral"  "Netral" 
+## [701] "Positif" "Netral"  "Negatif" "Negatif" "Netral"  "Netral"  "Netral" 
+## [708] "Negatif" "Netral"  "Negatif" "Negatif" "Netral"  "Negatif" "Negatif"
+## [715] "Netral"  "Positif" "Positif" "Negatif" "Negatif" "Netral"  "Negatif"
+## [722] "Positif" "Netral"  "Negatif" "Netral"  "Netral"  "Positif" "Netral" 
+## [729] "Negatif" "Negatif" "Positif" "Positif" "Positif" "Netral"  "Netral" 
+## [736] "Negatif" "Negatif" "Positif" "Negatif" "Negatif" "Positif" "Netral" 
+## [743] "Positif" "Netral"  "Netral"  "Netral"  "Negatif" "Positif" "Negatif"
+## [750] "Netral"  "Negatif" "Positif" "Positif" "Negatif" "Positif" "Negatif"
+## [757] "Netral"  "Netral"  "Positif" "Positif" "Netral"  "Negatif" "Negatif"
+## [764] "Positif" "Positif" "Negatif" "Negatif" "Netral"  "Netral"  "Positif"
+## [771] "Positif" "Netral"  "Negatif" "Positif" "Positif" "Positif" "Positif"
+## [778] "Netral"  "Negatif" "Netral"  "Netral"  "Negatif" "Negatif" "Negatif"
+## [785] "Positif" "Positif" "Negatif" "Positif" "Netral"  "Netral"  "Positif"
+## [792] "Negatif" "Netral"  "Negatif" "Negatif" "Positif" "Negatif" "Netral" 
+## [799] "Positif" "Negatif"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#menukar urutan baris}
+\NormalTok{data }\OtherTok{\textless{}{-}}\NormalTok{ hasil[}\FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{)]}
+\CommentTok{\#View(data)}
+\FunctionTok{write.csv}\NormalTok{(data, }\AttributeTok{file =} \StringTok{"datalabel.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dataLabel}\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"datalabel.csv"}\NormalTok{)}
+\NormalTok{ui }\OtherTok{\textless{}{-}} \FunctionTok{fluidPage}\NormalTok{(}
+    \FunctionTok{titlePanel}\NormalTok{(}\StringTok{"Sentiment Analysis Pajak"}\NormalTok{),}
+        \FunctionTok{mainPanel}\NormalTok{(}
+            
+            \FunctionTok{tabsetPanel}\NormalTok{(}\AttributeTok{type =} \StringTok{"tabs"}\NormalTok{,}
+                        \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Bagan"}\NormalTok{, }\FunctionTok{plotOutput}\NormalTok{(}\StringTok{"scatterplot"}\NormalTok{)), }
+                        \CommentTok{\# Plot}
+                        \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Data"}\NormalTok{, DT}\SpecialCharTok{::}\FunctionTok{dataTableOutput}\NormalTok{(}\StringTok{\textquotesingle{}tbl1\textquotesingle{}}\NormalTok{)),}
+                        \CommentTok{\# Output Data Dalam Tabel}
+                        \FunctionTok{tabPanel}\NormalTok{(}\StringTok{"Wordcloud"}\NormalTok{, }\FunctionTok{plotOutput}\NormalTok{(}\StringTok{"Wordcloud"}\NormalTok{))}
+\NormalTok{                        )}
+\NormalTok{        )}
+\NormalTok{    )}
+\CommentTok{\# SERVER}
+\NormalTok{server }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(input, output) \{}
+    
+    \CommentTok{\# Output Data}
+\NormalTok{    output}\SpecialCharTok{$}\NormalTok{tbl1 }\OtherTok{=}\NormalTok{ DT}\SpecialCharTok{::}\FunctionTok{renderDataTable}\NormalTok{(\{}
+\NormalTok{        DT}\SpecialCharTok{::}\FunctionTok{datatable}\NormalTok{(dataLabel, }\AttributeTok{options =} \FunctionTok{list}\NormalTok{(}\AttributeTok{lengthChange =} \ConstantTok{FALSE}\NormalTok{))}
+\NormalTok{    \})}
+
+\NormalTok{    output}\SpecialCharTok{$}\NormalTok{scatterplot }\OtherTok{\textless{}{-}} \FunctionTok{renderPlot}\NormalTok{(\{produk\_dataset}\OtherTok{\textless{}{-}}\FunctionTok{read.csv}\NormalTok{(}\StringTok{"dataPreprocessing.csv"}\NormalTok{,}\AttributeTok{stringsAsFactors =} \ConstantTok{FALSE}\NormalTok{)}
+
+\NormalTok{review }\OtherTok{\textless{}{-}}\FunctionTok{as.character}\NormalTok{(produk\_dataset}\SpecialCharTok{$}\NormalTok{text)}
+
+
+\NormalTok{s}\OtherTok{\textless{}{-}}\FunctionTok{get\_nrc\_sentiment}\NormalTok{(review)}
+
+\NormalTok{review\_combine}\OtherTok{\textless{}{-}}\FunctionTok{cbind}\NormalTok{(produk\_dataset}\SpecialCharTok{$}\NormalTok{text,s)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar=}\FunctionTok{rep}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{))}
+\FunctionTok{barplot}\NormalTok{(}\FunctionTok{colSums}\NormalTok{(s),}\AttributeTok{col=}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}gray\textquotesingle{}}\NormalTok{),}\AttributeTok{ylab=}\StringTok{\textquotesingle{}count\textquotesingle{}}\NormalTok{,}\AttributeTok{main=}\StringTok{\textquotesingle{}Sentiment Analysis Pajak\textquotesingle{}}\NormalTok{)}
+\NormalTok{    \}, }\AttributeTok{height=}\DecValTok{400}\NormalTok{)}
+\NormalTok{    output}\SpecialCharTok{$}\NormalTok{Wordcloud }\OtherTok{\textless{}{-}} \FunctionTok{renderPlot}\NormalTok{(\{}
+   \FunctionTok{set.seed}\NormalTok{(}\DecValTok{20}\NormalTok{)}
+\NormalTok{df}\OtherTok{\textless{}{-}}\NormalTok{df[}\FunctionTok{sample}\NormalTok{(}\FunctionTok{nrow}\NormalTok{(df)),]}
+\NormalTok{df}\OtherTok{\textless{}{-}}\NormalTok{df[}\FunctionTok{sample}\NormalTok{(}\FunctionTok{nrow}\NormalTok{(df)),]}
+\FunctionTok{glimpse}\NormalTok{(df)}
+
+\FunctionTok{inspect}\NormalTok{(dtm[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{,}\DecValTok{1}\SpecialCharTok{:}\DecValTok{20}\NormalTok{])}
+
+\NormalTok{df.train}\OtherTok{\textless{}{-}}\NormalTok{df[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{50}\NormalTok{,]}
+\NormalTok{df.test}\OtherTok{\textless{}{-}}\NormalTok{df[}\DecValTok{51}\SpecialCharTok{:}\DecValTok{100}\NormalTok{,]}
+
+\NormalTok{dtm.train}\OtherTok{\textless{}{-}}\NormalTok{dtm[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{50}\NormalTok{,]}
+\NormalTok{dtm.test}\OtherTok{\textless{}{-}}\NormalTok{dtm[}\DecValTok{51}\SpecialCharTok{:}\DecValTok{100}\NormalTok{,]}
+
+\FunctionTok{dim}\NormalTok{(dtm.train)}
+\NormalTok{fivefreq}\OtherTok{\textless{}{-}}\FunctionTok{findFreqTerms}\NormalTok{(dtm.train,}\DecValTok{5}\NormalTok{)}
+\FunctionTok{length}\NormalTok{(fivefreq)}
+
+\NormalTok{dtm.train.nb}\OtherTok{\textless{}{-}}\FunctionTok{DocumentTermMatrix}\NormalTok{(corpus.clean.train,}\AttributeTok{control =} \FunctionTok{list}\NormalTok{(}\AttributeTok{dictionary=}\NormalTok{fivefreq))}
+
+\CommentTok{\#dim(dtm.train.nb)}
+
+\NormalTok{dtm.test.nb}\OtherTok{\textless{}{-}}\FunctionTok{DocumentTermMatrix}\NormalTok{(corpus.clean.test,}\AttributeTok{control =} \FunctionTok{list}\NormalTok{(}\AttributeTok{dictionary=}\NormalTok{fivefreq))}
+
+\FunctionTok{dim}\NormalTok{(dtm.test.nb)}
+ 
+\NormalTok{convert\_count }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x)\{}
+\NormalTok{    y}\OtherTok{\textless{}{-}}\FunctionTok{ifelse}\NormalTok{(x}\SpecialCharTok{\textgreater{}}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{)}
+\NormalTok{    y}\OtherTok{\textless{}{-}}\FunctionTok{factor}\NormalTok{(y,}\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{),}\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"no"}\NormalTok{,}\StringTok{"yes"}\NormalTok{))}
+\NormalTok{    y}
+\NormalTok{\}}
+\NormalTok{trainNB}\OtherTok{\textless{}{-}}\FunctionTok{apply}\NormalTok{(dtm.train.nb,}\DecValTok{2}\NormalTok{,convert\_count)}
+\NormalTok{testNB}\OtherTok{\textless{}{-}}\FunctionTok{apply}\NormalTok{(dtm.test.nb,}\DecValTok{1}\NormalTok{,convert\_count)}
+
+\FunctionTok{wordcloud}\NormalTok{(corpus.clean,}\AttributeTok{min.freq =} \DecValTok{4}\NormalTok{,}\AttributeTok{max.words=}\DecValTok{100}\NormalTok{,}\AttributeTok{random.order=}\NormalTok{F,}\AttributeTok{colors=}\FunctionTok{brewer.pal}\NormalTok{(}\DecValTok{8}\NormalTok{,}\StringTok{"Dark2"}\NormalTok{))}
+\NormalTok{  \})}
+\NormalTok{\}}
+\FunctionTok{shinyApp}\NormalTok{(}\AttributeTok{ui =}\NormalTok{ ui, }\AttributeTok{server =}\NormalTok{ server)}
+\end{Highlighting}
+\end{Shaded}
+
+
+\end{document}
